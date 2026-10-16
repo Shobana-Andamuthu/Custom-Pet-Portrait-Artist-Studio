@@ -1,0 +1,91 @@
+/* ==========================================================================
+   PAWTRAIT ATELIER — RTL (Right-to-Left) Stylesheet
+   --------------------------------------------------------------------------
+   File   : assets/css/rtl.css
+   Notes  : Activated when <html dir="rtl">.
+            Uses CSS logical properties and mirrors directional UI elements.
+   ========================================================================== */
+
+[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Directional Icon Flips */
+[dir="rtl"] .bi-arrow-right,
+[dir="rtl"] .bi-arrow-left,
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-chevron-left {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* Dropdown Carets */
+[dir="rtl"] .dropdown-toggle::after {
+  margin-inline-start: 0.35em;
+  margin-inline-end: 0;
+}
+
+/* Rotating Stamp Badge in RTL */
+[dir="rtl"] .rotating-badge {
+  animation-direction: reverse;
+}
+[dir="rtl"] .rotating-badge .center-icon {
+  left: auto;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+[dir="rtl"] .discount-stamp {
+  transform: rotate(10deg);
+}
+
+
+/* Feature Box Numbers */
+[dir="rtl"] .feature-number {
+  inset-inline-end: auto;
+  inset-inline-start: 22px;
+}
+
+/* Footer Links Hover Offset */
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-3px);
+}
+
+/* Breadcrumb Separator */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: none;
+  padding-inline-end: 0.5rem;
+  padding-inline-start: 0;
+}
+
+/* Bootstrap Directional Overrides */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Preserve Neutral Direction on Icon Only Buttons */
+[dir="rtl"] .icon-btn,
+[dir="rtl"] .theme-toggle,
+[dir="rtl"] .rtl-toggle,
+[dir="rtl"] .back-to-top {
+  direction: ltr;
+}
+
+/* Form Controls */
+[dir="rtl"] .form-control,
+[dir="rtl"] .form-select {
+  text-align: right;
+}
+
+/* Home 2 RTL Overrides */
+[dir="rtl"] .h2-hero-sub-card {
+  transform: rotate(3deg);
+}
+[dir="rtl"] .h2-hero-sub-card:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+

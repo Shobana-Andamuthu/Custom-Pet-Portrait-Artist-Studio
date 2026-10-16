@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inquire about commissioning an heirloom custom pet portrait with Paw & Brush. Upload reference photos, select medium and size, and discuss your companion's portrait directly with the artist.">
+  <meta name="keywords" content="commission pet portrait, pet portrait inquiry, contact pet artist, custom animal fine art studio, pet oil painting quote, pet watercolor commission">
+  <meta name="author" content="Paw & Brush">
+  <title>Paw & Brush — Commission Request & Studio Contact</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Studio & Commission Request — Paw & Brush">
+  <meta property="og:description" content="Your Pet's Story, Beautifully Painted. Reserve a monthly studio commission slot and discuss your pet's reference photography directly with our classical realism artist.">
+  <meta property="og:image" content="assets/images/logo/logo.png">
+
+  <!-- Google Fonts: Playfair Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 + Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" data-bs-css>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Atelier Shared Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Pre-paint Theme & RTL Restoration (Supports URL query params ?theme=dark & ?dir=rtl) -->
+  <script>
+    (function () {
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var qTheme = urlParams.get("theme");
+        var qDir = urlParams.get("dir");
+        var t = qTheme || localStorage.getItem("pet-portrait-theme");
+        if (t) {
+          document.documentElement.setAttribute("data-bs-theme", t);
+        }
+        var r = qDir || localStorage.getItem("pet-portrait-dir");
+        if (r) {
+          document.documentElement.setAttribute("dir", r);
+          if (r === "rtl") {
+            var l = document.querySelector("link[data-bs-css]");
+            if (l) l.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Preloader — Handcrafted Atelier Presentation -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading Paw & Brush">
+    <div class="preloader-inner">
+      <div class="preloader-emblem">
+        <div class="preloader-spin-ring"></div>
+        <div class="preloader-badge-center">
+          <img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="preloader-logo-img" width="100" height="100">
+        </div>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-title">PAW &amp; <span class="text-brand">BRUSH</span></span>
+        <span class="preloader-subtitle">Custom Pet Portrait Studio</span>
+        <span class="preloader-slogan">Your Pet's Story, Beautifully Painted</span>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-caption">
+        <i class="bi bi-brush text-brand me-1"></i> Handcrafting Masterworks...
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Sticky Navbar -->
+  <div id="navbar-container"></div>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: CONTACT HERO
+         ====================================================================== -->
+    <section class="contact-hero" id="contactHero">
+      <div class="container position-relative z-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active text-brand" aria-current="page">Contact & Commission Request</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="eyebrow mb-3">
+              <i class="bi bi-chat-dots-fill text-brand"></i>
+              <span>Direct Studio Inquiries</span>
+            </div>
+            <h1 class="hero-title mb-3">
+              Begin Your Companion's <span class="text-serif-italic text-brand">Portrait Journey</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              Discuss your pet's portrait directly with the artist. We're happy to advise on photos, sizes, and compositions.
+            </p>
+
+            <div class="d-flex flex-wrap gap-4 pt-2 text-muted small">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-person-check-fill text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">Direct Artist Review</strong>
+                  <span>Personal painter consultation</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-camera-fill text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">Photo Advice</strong>
+                  <span>Lighting & pose guidance</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-shield-check text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">Clear Estimates</strong>
+                  <span>Transparent quotes before booking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden shadow-lg border border-2 border-white">
+                <img src="assets/images/contact/contact_hero_portrait.png" alt="Custom Goldendoodle Portrait in Tuxedo and Companion" class="w-100 h-auto" width="600" height="420" style="object-fit: cover; max-height: 440px;">
+              </div>
+              <div class="position-absolute bottom-0 start-0 m-2 m-sm-3 p-2 p-sm-3 bg-white bg-opacity-95 rounded-3 shadow-sm border border-light" style="max-width: min(280px, calc(100% - 1rem));">
+                <span class="badge bg-brand text-white mb-1"><i class="bi bi-clock-history me-1"></i>Queue Open</span>
+                <p class="small text-muted mb-0">Limited to 12 bespoke commissions monthly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: CONTACT DETAILS & RESPONSE EXPECTATIONS
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="contactChannels">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-geo-alt-fill"></i> Studio Channels</span>
+          <h2 class="section-title">Direct Studio Contacts</h2>
+          <p class="section-subtitle">Reach out directly for advice, quotes, or scheduling.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4 mb-4 align-items-stretch">
+          <!-- Channel 1: Phone -->
+          <div class="col-md-4">
+            <div class="contact-detail-card text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="contact-detail-icon mx-auto">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <h5 class="fw-bold mb-2">Artist Direct Line</h5>
+                <p class="small text-muted mb-3">Direct phone consultation with our studio painter.</p>
+              </div>
+              <div>
+                <a href="tel:+18005847297" class="fw-bold text-brand text-decoration-none fs-5 d-block mb-1">+1 (800) 584-PAWS</a>
+                <span class="badge bg-surface-2 text-muted mt-2 border">Mon – Fri, 9:00 AM – 5:00 PM PT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel 2: Email -->
+          <div class="col-md-4">
+            <div class="contact-detail-card text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="contact-detail-icon mx-auto">
+                  <i class="bi bi-envelope-open"></i>
+                </div>
+                <h5 class="fw-bold mb-2">Email Inquiries</h5>
+                <p class="small text-muted mb-3">Send snapshots or questions for complimentary advice.</p>
+              </div>
+              <div>
+                <a href="mailto:atelier@pawtraitstudio.art" class="fw-bold text-brand text-decoration-none fs-5 d-block mb-1">atelier@pawtraitstudio.art</a>
+                <span class="badge bg-surface-2 text-muted mt-2 border">24 – 48 Hour Turnaround</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel 3: Studio -->
+          <div class="col-md-4">
+            <div class="contact-detail-card text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="contact-detail-icon mx-auto">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h5 class="fw-bold mb-2">Portland Atelier</h5>
+                <p class="small text-muted mb-3">Private studio consultations and framing appointments.</p>
+              </div>
+              <div>
+                <span class="fw-bold text-brand fs-5 d-block mb-1">184 Artisan Square, Suite 4B</span>
+                <span class="badge bg-surface-2 text-muted mt-2 border">Portland, OR 97209, USA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Commitments Strip -->
+        <div class="row align-items-center g-4 p-4 bg-surface rounded-4 border border-soft shadow-xs">
+          <div class="col-lg-4 text-center text-lg-start">
+            <span class="badge bg-brand text-white mb-2"><i class="bi bi-award-fill me-1"></i>Client Care</span>
+            <h4 class="fw-bold mb-1">Our Studio Guarantee</h4>
+            <p class="small text-muted mb-0">Every portrait is painted with uncompromised craftsmanship.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-gold fs-5 flex-shrink-0 mt-1"></i>
+                  <div class="small">
+                    <strong class="d-block text-ink">Personal Photo Review</strong>
+                    <span class="text-muted">Direct lighting and angle advice within 24–48 hours.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-gold fs-5 flex-shrink-0 mt-1"></i>
+                  <div class="small">
+                    <strong class="d-block text-ink">Zero Risk</strong>
+                    <span class="text-muted">No payment until pose, size, and estimate are finalized.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-gold fs-5 flex-shrink-0 mt-1"></i>
+                  <div class="small">
+                    <strong class="d-block text-ink">Digital Proof Approval</strong>
+                    <span class="text-muted">Detailed preview approval before final varnishing.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-gold fs-5 flex-shrink-0 mt-1"></i>
+                  <div class="small">
+                    <strong class="d-block text-ink">Insured Delivery</strong>
+                    <span class="text-muted">Secure crated delivery with Certificate of Provenance.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: COMMISSION REQUEST FORM & PET PREFERENCES
+         ====================================================================== -->
+    <section class="section" id="commissionFormSection">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-pencil-square"></i> Studio Reservation</span>
+          <h2 class="section-title">Commission Request</h2>
+          <p class="section-subtitle">Fill in your pet's details below to request a portrait reservation.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9">
+
+            <!-- Frontend Demo Alert Notice -->
+            <div class="alert alert-warning border-0 bg-gold-light text-ink rounded-3 p-3 mb-4 d-flex align-items-center gap-3 shadow-xs" role="alert">
+              <i class="bi bi-info-circle-fill text-gold fs-4 flex-shrink-0"></i>
+              <div class="small">
+                <strong>Frontend Interactive Demonstration:</strong> Validates your preferences locally in your browser and displays an instant summary receipt. No personal information is stored.
+              </div>
+            </div>
+
+            <!-- Main Form Card -->
+            <div class="form-card" id="commissionFormCard">
+              <form id="commissionForm" novalidate>
+
+                <!-- Part 1: Customer Contact Information -->
+                <div class="form-section-head">
+                  <span class="badge bg-brand text-white mb-1">Part 1</span>
+                  <h4>Customer & Contact Details</h4>
+                  <p class="small text-muted mb-0">Where we'll send your digital proof and proposal.</p>
+                </div>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="customerName" class="form-label-atelier">Full Name <span class="req">*</span></label>
+                    <input type="text" class="form-control form-control-lg" id="customerName" placeholder="e.g. Eleanor Vance" required autocomplete="name">
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="customerEmail" class="form-label-atelier">Email Address <span class="req">*</span></label>
+                    <input type="email" class="form-control form-control-lg" id="customerEmail" placeholder="eleanor@example.com" required autocomplete="email">
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="customerPhone" class="form-label-atelier">Phone Number <span class="text-muted fw-normal">(Optional)</span></label>
+                    <input type="tel" class="form-control form-control-lg" id="customerPhone" placeholder="+1 (555) 234-5678" autocomplete="tel">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="inquiryType" class="form-label-atelier">Inquiry Purpose <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="inquiryType" required>
+                      <option value="commission" selected>Custom Pet Portrait Commission</option>
+                      <option value="consultation">Photo Evaluation & Consultation Call</option>
+                      <option value="memorial">Memorial Tribute Portrait</option>
+                      <option value="gift">Gift Certificate / Special Occasion</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Part 2: Pet Details & Art Preferences -->
+                <div class="form-section-head pt-2">
+                  <span class="badge bg-brand text-white mb-1">Part 2</span>
+                  <h4>Pet Specifications & Preferences</h4>
+                  <p class="small text-muted mb-0">Tell us about your pet and desired styling.</p>
+                </div>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="petName" class="form-label-atelier">Pet's Name(s) <span class="req">*</span></label>
+                    <input type="text" class="form-control form-control-lg" id="petName" placeholder="e.g. Barnaby & Willow" required>
+                    <div class="invalid-feedback">Please share your pet's name.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="petType" class="form-label-atelier">Pet Species / Breed <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="petType" required>
+                      <option value="" disabled selected>Select pet species...</option>
+                      <option value="dog">Dog (Hound, Retriever, Terrier, etc.)</option>
+                      <option value="cat">Cat (Tabby, Siamese, Maine Coon, etc.)</option>
+                      <option value="horse">Equine / Horse</option>
+                      <option value="rabbit">Rabbit / Small Mammal</option>
+                      <option value="bird">Avian / Bird</option>
+                      <option value="other">Other Unique Companion</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose your pet type.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="petCount" class="form-label-atelier">Number of Pets in Portrait <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="petCount" required>
+                      <option value="" disabled selected>Select number of pets...</option>
+                      <option value="1">1 Companion (Solo Portrait)</option>
+                      <option value="2">2 Companions (Duo)</option>
+                      <option value="3">3 Companions (Trio)</option>
+                      <option value="4+">4+ Companions (Group Montage)</option>
+                    </select>
+                    <div class="invalid-feedback">Please select the number of pets.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="portraitSize" class="form-label-atelier">Desired Artwork Size <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="portraitSize" required>
+                      <option value="" disabled selected>Select portrait dimensions...</option>
+                      <option value="8x10">8" × 10" — Miniature Keepsake</option>
+                      <option value="11x14">11" × 14" — Classic Salon</option>
+                      <option value="16x20">16" × 20" — Statement Mantelpiece</option>
+                      <option value="20x24">20" × 24" — Grand Heirloom Canvas</option>
+                      <option value="custom">Custom Scale / Need Artist Guidance</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a target size.</div>
+                  </div>
+
+                  <!-- Medium Selection Radio Cards -->
+                  <div class="col-12 mt-3">
+                    <label class="form-label-atelier d-block mb-2">Preferred Art Medium <span class="req">*</span></label>
+                    <div class="medium-grid" id="mediumSelectorContainer" role="radiogroup" aria-label="Preferred Art Medium">
+                      
+                      <!-- Option 1: Watercolor -->
+                      <div class="medium-option-card" tabindex="0" role="radio" aria-checked="false">
+                        <input type="radio" name="preferredMedium" value="watercolor" id="medWatercolor" required>
+                        <div class="medium-card-body">
+                          <h6><i class="bi bi-droplet text-brand me-1"></i> Watercolor</h6>
+                          <p>Luminous fluid washes on archival cotton rag.</p>
+                        </div>
+                        <span class="price-tag">From $320</span>
+                      </div>
+
+                      <!-- Option 2: Charcoal -->
+                      <div class="medium-option-card" tabindex="0" role="radio" aria-checked="false">
+                        <input type="radio" name="preferredMedium" value="charcoal" id="medCharcoal" required>
+                        <div class="medium-card-body">
+                          <h6><i class="bi bi-pencil text-brand me-1"></i> Charcoal &amp; Pencil</h6>
+                          <p>Rich tonal depth and detailed graphite pencil work.</p>
+                        </div>
+                        <span class="price-tag">From $280</span>
+                      </div>
+
+                      <!-- Option 3: Acrylic -->
+                      <div class="medium-option-card" tabindex="0" role="radio" aria-checked="false">
+                        <input type="radio" name="preferredMedium" value="acrylic" id="medAcrylic" required>
+                        <div class="medium-card-body">
+                          <h6><i class="bi bi-palette text-brand me-1"></i> Modern Acrylic</h6>
+                          <p>Vibrant pigments with rich brushwork textures.</p>
+                        </div>
+                        <span class="price-tag">From $450</span>
+                      </div>
+
+                      <!-- Option 4: Oil on Linen (Recommended) -->
+                      <div class="medium-option-card" tabindex="0" role="radio" aria-checked="false">
+                        <span class="badge-rec">Masterpiece</span>
+                        <input type="radio" name="preferredMedium" value="oil" id="medOil" required>
+                        <div class="medium-card-body">
+                          <h6><i class="bi bi-brush text-brand me-1"></i> Oil on Linen</h6>
+                          <p>Translucent glazes on archival Belgian linen.</p>
+                        </div>
+                        <span class="price-tag">From $580</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Budget & Timeframe -->
+                  <div class="col-md-6 mt-3">
+                    <label for="budgetRange" class="form-label-atelier">Estimated Budget Range <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="budgetRange" required>
+                      <option value="" disabled selected>Select budget range...</option>
+                      <option value="tier1">$250 – $450 (Intimate Portrait)</option>
+                      <option value="tier2">$450 – $750 (Classic Acrylic or Medium Oil)</option>
+                      <option value="tier3">$750 – $1,200 (Large Oil or Multi-Pet)</option>
+                      <option value="tier4">$1,200+ (Grand Scale Heirloom)</option>
+                      <option value="flexible">Flexible / Please advise on options</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a budget range.</div>
+                  </div>
+
+                  <div class="col-md-6 mt-3">
+                    <label for="timeframe" class="form-label-atelier">Desired Delivery Timeframe <span class="req">*</span></label>
+                    <select class="form-select form-select-lg" id="timeframe" required>
+                      <option value="" disabled selected>Select timeframe...</option>
+                      <option value="standard">Standard Studio Queue (4–6 Weeks)</option>
+                      <option value="birthday">Specific Birthday / Anniversary Target</option>
+                      <option value="holiday">Holiday Gifting Window</option>
+                      <option value="memorial">Urgent Memorial Queue</option>
+                      <option value="flexible">No Rush / Unhurried</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your preferred timeframe.</div>
+                  </div>
+
+                  <div class="col-12 mt-3">
+                    <label for="specialInstructions" class="form-label-atelier">Special Instructions & Notes <span class="text-muted fw-normal">(Optional)</span></label>
+                    <textarea class="form-control" id="specialInstructions" rows="3" placeholder="Tell us about your pet's personality, favorite expression, memorable habits, or preferred background tones..."></textarea>
+                    <div class="form-text text-muted">Mention eye color, personality quirks, or memorial details.</div>
+                  </div>
+
+                  <!-- Dropzone Photo Upload Area inside the form -->
+                  <div class="col-12 mt-4">
+                    <label class="form-label-atelier d-block mb-1">Attach Reference Photos <span class="text-muted fw-normal">(Optional — up to 8 images)</span></label>
+                    <div class="upload-dropzone" id="photoDropzone" role="button" tabindex="0" aria-label="Upload reference photos">
+                      <i class="bi bi-cloud-arrow-up drop-icon"></i>
+                      <h5 class="fw-bold mb-1">Click or Drag & Drop Reference Photos</h5>
+                      <p class="text-muted small mb-2">Smartphone or camera photos (JPG, PNG, WEBP up to 15MB each)</p>
+                      <span class="btn btn-outline-brand btn-sm px-3">
+                        <i class="bi bi-folder2-open me-1"></i>Browse Files from Device
+                      </span>
+                      <input type="file" id="referencePhotos" multiple accept="image/*" class="d-none">
+                    </div>
+                    <!-- Upload Previews -->
+                    <div class="upload-preview-container" id="uploadPreviewContainer"></div>
+                  </div>
+
+                </div>
+
+                <!-- Submit Action -->
+                <div class="pt-4 border-top border-soft">
+                  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                    <div class="small text-muted">
+                      <i class="bi bi-shield-lock-fill text-gold me-1"></i> Your information is kept completely confidential.
+                    </div>
+                    <button type="submit" class="btn btn-brand btn-lg px-5 shadow w-100 w-sm-auto" id="btnSubmitInquiry">
+                      <i class="bi bi-send-check me-2"></i>Submit Commission Request
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Success State Receipt Container (Initially Hidden) -->
+            <div id="successReceiptContainer" style="display: none;">
+              <div class="success-receipt-card">
+                <div class="success-receipt-icon">
+                  <i class="bi bi-check2-circle"></i>
+                </div>
+                <span class="badge bg-brand text-white px-3 py-1 mb-2">Commission Request Submitted</span>
+                <h2 class="display-6 fw-bold font-heading mb-2">Thank You, <span id="receiptCustomerName">Client</span>!</h2>
+                <p class="text-muted mx-auto mb-4" style="max-width: 540px;">
+                  Your portrait inquiry has been recorded in our interactive demonstration system. Our atelier founder will evaluate your photos and follow up with a personalized composition review.
+                </p>
+
+                <!-- Receipt Summary Table -->
+                <div class="receipt-summary-table shadow-xs">
+                  <div class="row-item">
+                    <span class="text-muted">Inquiry Reference:</span>
+                    <strong class="text-brand" id="receiptInquiryId">#ATELIER-2026-0000</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Client Contact:</span>
+                    <strong id="receiptCustomerEmail">email@example.com</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Pet Companion:</span>
+                    <strong id="receiptPetSummary">Barnaby (Dog, Solo)</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Art Medium:</span>
+                    <strong id="receiptMedium">Classical Oil on Linen</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Target Size:</span>
+                    <strong id="receiptSize">16" × 20"</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Budget Tier:</span>
+                    <strong id="receiptBudget">$450 – $750</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Timeframe:</span>
+                    <strong id="receiptTimeframe">Standard Queue (4–6 Weeks)</strong>
+                  </div>
+                  <div class="row-item">
+                    <span class="text-muted">Reference Photos:</span>
+                    <strong id="receiptPhotosCount">0 photos attached</strong>
+                  </div>
+                </div>
+
+                <div class="alert alert-info border-0 bg-surface-2 text-ink rounded-3 p-3 mx-auto mb-4 small" style="max-width: 520px;">
+                  <i class="bi bi-bell-fill text-brand me-1"></i>
+                  <strong>What Happens Next:</strong> In a live studio environment, our artist reviews photo resolution, confirms canvas readiness, and sends a digital composition mock-up before any payment is requested.
+                </div>
+
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                  <button type="button" class="btn btn-outline-brand px-4" id="btnResetInquiry">
+                    <i class="bi bi-arrow-counterclockwise me-1"></i>Submit Another Inquiry
+                  </button>
+                  <a href="portfolio.html" class="btn btn-brand px-4">
+                    <i class="bi bi-images me-1"></i>Browse Master Gallery
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: REFERENCE PHOTO GUIDANCE & TIPS
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="photoGuidanceSection">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-camera-fill"></i> Studio Photography Guide</span>
+          <h2 class="section-title">Reference Photo Guide</h2>
+          <p class="section-subtitle">Simple smartphone photos work wonderfully when following these 3 tips.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tip 1 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-surface rounded-4 border border-soft h-100 shadow-xs">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 200px;">
+                <img src="assets/images/contact/contact_photo_daylight.jpg" alt="Dog in Soft Natural Daylight near Window" class="w-100 h-100 object-fit-cover">
+              </div>
+              <span class="badge bg-gold-light text-ink mb-2">Tip 1</span>
+              <h5 class="fw-bold mb-2"><i class="bi bi-brightness-high text-gold me-1"></i> Natural Light</h5>
+              <p class="small text-muted mb-0">
+                Shoot near a bright window or outdoors. Avoid flash to preserve natural coat highlights.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tip 2 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-surface rounded-4 border border-soft h-100 shadow-xs">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 200px;">
+                <img src="assets/images/contact/contact_photo_closeup.jpg" alt="Eye-Level Portrait Showing Iris Clarity and Whiskers" class="w-100 h-100 object-fit-cover">
+              </div>
+              <span class="badge bg-gold-light text-ink mb-2">Tip 2</span>
+              <h5 class="fw-bold mb-2"><i class="bi bi-eye text-gold me-1"></i> Eye Level</h5>
+              <p class="small text-muted mb-0">
+                Shoot at your pet's eye level to capture iris color, whiskers, and natural expression.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tip 3 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-surface rounded-4 border border-soft h-100 shadow-xs">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 200px;">
+                <img src="assets/images/contact/contact_photo_posture.jpg" alt="Two Friendly Companions in Natural Relaxed Posture" class="w-100 h-100 object-fit-cover">
+              </div>
+              <span class="badge bg-gold-light text-ink mb-2">Tip 3</span>
+              <h5 class="fw-bold mb-2"><i class="bi bi-heart text-gold me-1"></i> Authentic Expression</h5>
+              <p class="small text-muted mb-0">
+                Capture relaxed, everyday poses. Candid phone photos work best.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       SECTION 5: FOOTER
+       ====================================================================== -->
+  <div id="footer-container"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Atelier Shared Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Contact & Commission Logic -->
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

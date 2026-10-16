@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore custom pet portraits gallery by Paw & Brush. Dogs, cats, horses, and avian companions painted in watercolor, charcoal pencil, acrylic, and digital fine art.">
+  <meta name="keywords" content="pet portrait portfolio, dog portraits, cat art gallery, horse oil paintings, custom pet gallery, pet memorial artwork, animal watercolor">
+  <meta name="author" content="Paw & Brush">
+  <title>Paw & Brush — Master Pet Portrait Gallery & Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio — Master Pet Portrait Gallery | Paw & Brush">
+  <meta property="og:description" content="Your Pet's Story, Beautifully Painted. An expansive retrospective of commissioned animal masterworks. Filter by watercolor, charcoal pencil, acrylic, and digital art.">
+  <meta property="og:image" content="assets/images/logo/logo.png">
+
+  <!-- Google Fonts: Playfair Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 + Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" data-bs-css>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Atelier Shared Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Pre-paint Theme & RTL Restoration (Supports URL query params ?theme=dark & ?dir=rtl) -->
+  <script>
+    (function () {
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var qTheme = urlParams.get("theme");
+        var qDir = urlParams.get("dir");
+        var t = qTheme || localStorage.getItem("pet-portrait-theme");
+        if (t) {
+          document.documentElement.setAttribute("data-bs-theme", t);
+        }
+        var r = qDir || localStorage.getItem("pet-portrait-dir");
+        if (r) {
+          document.documentElement.setAttribute("dir", r);
+          if (r === "rtl") {
+            var l = document.querySelector("link[data-bs-css]");
+            if (l) l.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Preloader — Handcrafted Atelier Presentation -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading Paw & Brush">
+    <div class="preloader-inner">
+      <div class="preloader-emblem">
+        <div class="preloader-spin-ring"></div>
+        <div class="preloader-badge-center">
+          <img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="preloader-logo-img" width="100" height="100">
+        </div>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-title">PAW &amp; <span class="text-brand">BRUSH</span></span>
+        <span class="preloader-subtitle">Custom Pet Portrait Studio</span>
+        <span class="preloader-slogan">Your Pet's Story, Beautifully Painted</span>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-caption">
+        <i class="bi bi-brush text-brand me-1"></i> Handcrafting Masterworks...
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Sticky Navbar -->
+  <div id="navbar-container"></div>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: PORTFOLIO HERO
+         ====================================================================== -->
+    <section class="portfolio-hero" id="portfolioHero">
+      <div class="container position-relative z-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active text-brand" aria-current="page">Portfolio</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="eyebrow mb-3">
+              <i class="bi bi-palette-fill text-brand"></i>
+              <span>Archival Retrospective</span>
+            </div>
+            <h1 class="hero-title mb-3">
+              The Master Pet Portrait <span class="text-serif-italic text-brand">Gallery</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              Explore custom portraits honoring beloved companions worldwide. Filter by traditional mediums and framing styles.
+            </p>
+
+            <div class="d-flex flex-wrap gap-4 pt-2 text-muted small">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-patch-check-fill text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">450+ Completed Works</strong>
+                  <span>Loved by global collectors</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-shield-check text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">100+ Year Lightfast</strong>
+                  <span>Museum-grade pigments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-stars text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">4 Core Mediums</strong>
+                  <span>Watercolor, Pencil, Acrylic, Digital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden shadow-lg border border-2 border-white" style="height: 380px;">
+                <img src="assets/images/gallery/port_hero_montage.jpg" alt="PawTrait Atelier Commissioned Portrait Montage" class="w-100 h-100 object-fit-cover" width="600" height="400">
+              </div>
+              <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-white bg-opacity-95 rounded-3 shadow-sm border border-light" style="max-width: 260px;">
+                <span class="badge bg-brand text-white mb-1">Master Collection</span>
+                <p class="small text-muted mb-0">Handcrafted originals signed with a Certificate of Authenticity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: GALLERY INTRODUCTION
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="galleryIntro">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="port-intro-frame">
+              <img src="assets/images/gallery/port_intro_curator.jpg" alt="PawTrait Atelier Artist at Work" loading="lazy">
+              <div class="badge bg-dark text-white position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill shadow">
+                <i class="bi bi-brush me-1 text-gold"></i> Live Studio Craft
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="section-head text-start mb-4">
+              <span class="eyebrow"><i class="bi bi-gem"></i> Curatorial Standards</span>
+              <h2 class="section-title">Curatorial Standards & Craft</h2>
+              <p class="section-subtitle">
+                We treat companion portraiture with classical reverence and technical rigor.
+              </p>
+              <div class="divider-brand ms-0"></div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-eye"></i></div>
+                  <h6 class="fw-bold mb-1">Soulful Character</h6>
+                  <p class="small text-muted mb-0">Capturing eye gleam, head tilts, and distinct coat markings.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-shield-shaded"></i></div>
+                  <h6 class="fw-bold mb-1">Archival Foundation</h6>
+                  <p class="small text-muted mb-0">Belgian linen and 300gsm cotton rag ensure non-yellowing longevity.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-check-circle"></i></div>
+                  <h6 class="fw-bold mb-1">Digital Proofing</h6>
+                  <p class="small text-muted mb-0">High-resolution previews before varnishing for your approval.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-box2-heart"></i></div>
+                  <h6 class="fw-bold mb-1">Insured Dispatch</h6>
+                  <p class="small text-muted mb-0">Protective glassine wrap and custom wood crates with transit coverage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: WORKING ART-MEDIUM FILTERS
+         ====================================================================== -->
+    <section class="section pb-0" id="galleryFilters">
+      <div class="container">
+        <div class="section-head center mb-4">
+          <span class="eyebrow"><i class="bi bi-funnel"></i> Medium Curation</span>
+          <h2 class="section-title">Explore by Artistic Medium</h2>
+          <p class="section-subtitle">Select a medium to view specialized techniques and textures.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="portfolio-filter-bar" role="toolbar" aria-label="Artwork Medium Filters">
+          <button type="button" class="filter-pill active" data-filter="all" aria-pressed="true">
+            <span>All Works</span>
+            <span class="badge">16</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="watercolor" aria-pressed="false">
+            <i class="bi bi-droplet-fill text-info"></i>
+            <span>Watercolor</span>
+            <span class="badge">4</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="pencil" aria-pressed="false">
+            <i class="bi bi-pencil-fill text-secondary"></i>
+            <span>Charcoal & Pencil</span>
+            <span class="badge">4</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="acrylic" aria-pressed="false">
+            <i class="bi bi-palette-fill text-warning"></i>
+            <span>Acrylic & Impasto</span>
+            <span class="badge">4</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="digital" aria-pressed="false">
+            <i class="bi bi-laptop text-primary"></i>
+            <span>Digital Fine Art</span>
+            <span class="badge">4</span>
+          </button>
+        </div>
+
+        <!-- Result count bar -->
+        <div class="d-flex align-items-center justify-content-between pb-3 border-bottom mb-4">
+          <div class="small text-muted">
+            Displaying <span class="fw-bold text-ink" id="galleryCount">16</span> master pet portraits
+          </div>
+          <div class="small text-muted d-none d-md-block">
+            <i class="bi bi-info-circle me-1"></i>Click any portrait for high-resolution macro zoom & sizing specs
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: MAIN PET PORTRAIT GALLERY GRID
+         ====================================================================== -->
+    <section class="section pt-3" id="galleryCollection">
+      <div class="container">
+        <!-- Live dynamic gallery container -->
+        <div class="row g-4" id="galleryGrid">
+          <!-- Populated by assets/js/portfolio.js with 16 masterworks across 4 mediums -->
+          <div class="col-12 text-center py-5" id="galleryEmpty" style="display:none;">
+            <i class="bi bi-brush fs-1 text-muted"></i>
+            <h5 class="fw-bold mt-3">No artworks found in this category</h5>
+            <p class="small text-muted">Try switching to "All Works" to see the complete gallery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: FEATURED ARTWORK DETAILS & CLOSE-UP VIEWS
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="galleryDetails">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-zoom-in"></i> Craftsmanship Spotlight</span>
+          <h2 class="section-title">Macro Details That Define Handcrafted Art</h2>
+          <p class="section-subtitle">Handcrafted textures, natural light reflection, and museum framing.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Detail 1: Tactile Whisker Detailing -->
+          <div class="col-12 col-md-4">
+            <div class="ref-card ref-card-medium">
+              <img src="assets/images/gallery/port_detail_whisker.jpg" alt="Macro Whisker Hair Hatching Detail" class="ref-card-img" loading="eager">
+              <div class="ref-card-overlay"></div>
+              <span class="ref-card-badge-tag"><i class="bi bi-search me-1"></i>Macro 10x</span>
+              <div class="ref-card-content">
+                <span class="ref-card-eyebrow">FINE DRAUGHTSMANSHIP</span>
+                <h3 class="ref-card-title">Whisker Detailing</h3>
+                <p class="ref-card-desc">Fine brushes capture delicate whiskers and reflective eye highlights.</p>
+                <a href="#galleryCollection" class="ref-card-btn">
+                  <span>View in Gallery</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail 2: Layered Luminous Glazes -->
+          <div class="col-12 col-md-4">
+            <div class="ref-card ref-card-medium">
+              <img src="assets/images/gallery/port_detail_glaze.jpg" alt="Layered Oil & Acrylic Impasto Glazing" class="ref-card-img" loading="eager">
+              <div class="ref-card-overlay"></div>
+              <span class="ref-card-badge-tag"><i class="bi bi-palette me-1"></i>Multi-Layered</span>
+              <div class="ref-card-content">
+                <span class="ref-card-eyebrow">TRANSLUCENT DEPTH</span>
+                <h3 class="ref-card-title">Luminous Glazes</h3>
+                <p class="ref-card-desc">Translucent glazes refract natural light across different times of day.</p>
+                <a href="#galleryCollection" class="ref-card-btn">
+                  <span>View in Gallery</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail 3: Museum Framing & Fillets -->
+          <div class="col-12 col-md-4">
+            <div class="ref-card ref-card-medium">
+              <img src="assets/images/gallery/port_detail_frame.jpg" alt="Custom Handcrafted Hardwood Frame with Gold Fillet" class="ref-card-img" loading="eager">
+              <div class="ref-card-overlay"></div>
+              <span class="ref-card-badge-tag"><i class="bi bi-gem me-1"></i>Italian Moulding</span>
+              <div class="ref-card-content">
+                <span class="ref-card-eyebrow">BESPOKE FINISHING</span>
+                <h3 class="ref-card-title">Museum Framing</h3>
+                <p class="ref-card-desc">Solid walnut frames and gilded fillets with museum barrier board.</p>
+                <a href="commission-process.html" class="ref-card-btn">
+                  <span>Explore Framing</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: COMMISSION CTA BANNER
+         ====================================================================== -->
+    <section class="section py-4" id="portfolioCta">
+      <div class="container">
+        <div class="offer-banner" data-countdown="2026-11-30T23:59:59">
+          <div class="ob-inner">
+            <div>
+              <span class="ob-tag"><i class="bi bi-palette-fill"></i> Custom Atelier Masterpieces</span>
+              <h2>Ready to Immortalize Your Companion?</h2>
+              <p>Share your favorite photos. We'll evaluate lighting and compose a timeless heirloom portrait.</p>
+              
+              <div class="d-flex flex-wrap gap-4 align-items-center">
+                <div class="countdown" aria-label="Countdown to next slot closing">
+                  <div class="cd-box"><div class="cd-num cd-days">14</div><div class="cd-label">Days</div></div>
+                  <div class="cd-box"><div class="cd-num cd-hours">08</div><div class="cd-label">Hours</div></div>
+                  <div class="cd-box"><div class="cd-num cd-mins">42</div><div class="cd-label">Mins</div></div>
+                  <div class="cd-box"><div class="cd-num cd-secs">15</div><div class="cd-label">Secs</div></div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="contact.html?type=commission" class="btn btn-brand btn-lg">
+                    <i class="bi bi-brush-fill me-2"></i>Start Your Commission
+                  </a>
+                  <a href="commission-process.html" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-journal-text me-2"></i>Pricing Guide
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Provenance Stamp -->
+            <div class="discount-stamp" aria-hidden="true">
+              <strong>100+</strong>
+              <span>YEAR ARCHIVAL<br>MUSEUM GRADE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ACCESSIBLE ARTWORK LIGHTBOX MODAL
+         ====================================================================== -->
+    <div class="modal fade" id="artworkLightbox" tabindex="-1" aria-labelledby="lightboxTitle" aria-hidden="true" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content shadow-lg border-0 overflow-hidden">
+          <div class="modal-header border-0 pb-0 justify-content-between">
+            <span class="badge bg-brand text-white px-3 py-2 rounded-pill" id="lightboxCounter">1 / 16</span>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary" id="lightboxPrev" aria-label="Previous artwork">
+                <i class="bi bi-arrow-left"></i>
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" id="lightboxNext" aria-label="Next artwork">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+              <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close dialog"></button>
+            </div>
+          </div>
+          <div class="modal-body p-4 p-lg-5">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-7">
+                <div class="lightbox-img-wrap shadow-sm">
+                  <img src="assets/images/gallery/port_wc_corgi.jpg" alt="Artwork detail preview" id="lightboxImg" class="img-fluid rounded">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="d-flex flex-column h-100 justify-content-between">
+                  <div>
+                    <div class="text-brand small fw-bold text-uppercase mb-1" id="lightboxBreed">Pembroke Welsh Corgi</div>
+                    <h2 class="h3 fw-bold font-heading mb-3" id="lightboxTitle">Barnaby the Corgi</h2>
+                    
+                    <div class="p-3 bg-surface-2 rounded-3 border border-soft mb-3">
+                      <div class="row g-2 small">
+                        <div class="col-6">
+                          <span class="text-muted d-block">Medium:</span>
+                          <strong id="lightboxMedium">Botanical Watercolor</strong>
+                        </div>
+                        <div class="col-6">
+                          <span class="text-muted d-block">Dimensions:</span>
+                          <strong id="lightboxDim">16" × 20"</strong>
+                        </div>
+                        <div class="col-6">
+                          <span class="text-muted d-block">Base Price:</span>
+                          <strong class="text-brand" id="lightboxPrice">$240</strong>
+                        </div>
+                        <div class="col-6">
+                          <span class="text-muted d-block">Turnaround:</span>
+                          <strong id="lightboxTurnaround">10–14 Days</strong>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="text-muted small mb-4" id="lightboxDesc">
+                      Painted with light-reactive Arches cold-pressed washes capturing Barnaby's joyous perky smile and amber coat undertones.
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-top d-flex flex-column gap-2">
+                    <a href="commission-process.html" class="btn btn-brand w-100" id="lightboxCta">
+                      <i class="bi bi-palette me-2"></i>Commission Similar Artwork
+                    </a>
+                    <button type="button" class="btn btn-outline-secondary w-100 btn-sm" data-bs-dismiss="modal">
+                      Close Lightbox
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======================================================================
+       SECTION 7: SHARED FOOTER CONTAINER
+       ====================================================================== -->
+  <div id="footer-container"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Atelier Shared Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

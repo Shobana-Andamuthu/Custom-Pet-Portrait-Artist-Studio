@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover how to commission a custom handcrafted pet portrait with Paw & Brush. Step-by-step guidance, pricing guide, canvas sizing, and framing options.">
+  <meta name="keywords" content="commission pet portrait, pet portrait pricing, how to commission animal art, custom pet portrait process, pet portrait sizing, memorial pet portrait guide">
+  <meta name="author" content="Paw & Brush">
+  <title>Paw & Brush — 5-Stage Commission Process & Sizing Guide</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Commission Process & Sizing Guide — Paw & Brush">
+  <meta property="og:description" content="Your Pet's Story, Beautifully Painted. From initial photo consultation to museum-grade varnishing and insured delivery.">
+  <meta property="og:image" content="assets/images/logo/logo.png">
+
+  <!-- Google Fonts: Playfair Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 + Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" data-bs-css>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Atelier Shared Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Pre-paint Theme & RTL Restoration (Supports URL query params ?theme=dark & ?dir=rtl) -->
+  <script>
+    (function () {
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var qTheme = urlParams.get("theme");
+        var qDir = urlParams.get("dir");
+        var t = qTheme || localStorage.getItem("pet-portrait-theme");
+        if (t) {
+          document.documentElement.setAttribute("data-bs-theme", t);
+        }
+        var r = qDir || localStorage.getItem("pet-portrait-dir");
+        if (r) {
+          document.documentElement.setAttribute("dir", r);
+          if (r === "rtl") {
+            var l = document.querySelector("link[data-bs-css]");
+            if (l) l.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Preloader — Handcrafted Atelier Presentation -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading Paw & Brush">
+    <div class="preloader-inner">
+      <div class="preloader-emblem">
+        <div class="preloader-spin-ring"></div>
+        <div class="preloader-badge-center">
+          <img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="preloader-logo-img" width="100" height="100">
+        </div>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-title">PAW &amp; <span class="text-brand">BRUSH</span></span>
+        <span class="preloader-subtitle">Custom Pet Portrait Studio</span>
+        <span class="preloader-slogan">Your Pet's Story, Beautifully Painted</span>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-caption">
+        <i class="bi bi-brush text-brand me-1"></i> Handcrafting Masterworks...
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Sticky Navbar -->
+  <div id="navbar-container"></div>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: HERO (Bespoke Roadmap Overview)
+         ====================================================================== -->
+    <section class="process-hero" id="processHero">
+      <div class="container position-relative z-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active text-brand" aria-current="page">Commission Process</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="eyebrow mb-3">
+              <i class="bi bi-compass text-brand"></i>
+              <span>Commission Roadmap</span>
+            </div>
+            <h1 class="hero-title mb-3">
+              The Commission <span class="text-serif-italic text-brand">Journey</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              How we transform your favorite snapshots into museum-grade heirloom portraits.
+            </p>
+
+            <div class="d-flex flex-wrap gap-4 pt-2 text-muted small">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-patch-check-fill text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">100% Hand-Painted</strong>
+                  <span>Authentic fine art pigments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-repeat text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">Digital Proofing</strong>
+                  <span>Approve drafts before varnishing</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-shield-check text-gold fs-5"></i>
+                <div>
+                  <strong class="d-block text-ink">Insured Transit</strong>
+                  <span>Reinforced protective packaging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden shadow-lg border border-2 border-white">
+                <img src="assets/images/process/proc_hero_studio.jpg" alt="Reference smartphone photo and custom framed cat portrait on artist desk" class="w-100 h-auto" width="600" height="400" loading="eager">
+              </div>
+              <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-white bg-opacity-95 rounded-3 shadow-sm border border-light" style="max-width: 270px;">
+                <span class="badge bg-brand text-white mb-1"><i class="bi bi-calendar-event me-1"></i>Studio Queue</span>
+                <p class="small text-muted mb-0">Limited to 12 bespoke commissions each month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: INTRODUCTION TO COMMISSIONING
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="processIntro">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden shadow border border-soft">
+                <img src="assets/images/process/proc_intro_palette.jpg" alt="PawTrait Atelier artist painting bespoke golden retriever portrait at easel with collector" class="w-100 h-auto" width="500" height="380" loading="eager">
+              </div>
+              <div class="badge bg-dark text-white position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill shadow">
+                <i class="bi bi-brush me-1 text-gold"></i> Atelier Philosophy
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="section-head text-start mb-4">
+              <span class="eyebrow"><i class="bi bi-stars"></i> Curatorial Standards</span>
+              <h2 class="section-title">Authentic Artistry, Not Automated Prints</h2>
+              <p class="section-subtitle">
+                Every portrait is an authentic hand-painted tribute crafted with archival pigments on fine linen and cotton rag.
+              </p>
+              <div class="divider-brand ms-0"></div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-chat-heart"></i></div>
+                  <h6 class="fw-bold mb-1">Personal Artist Dialogue</h6>
+                  <p class="small text-muted mb-0">Direct conversation with your painter to capture distinct quirks and coloring.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-palette"></i></div>
+                  <h6 class="fw-bold mb-1">Authentic Fine Art Pigments</h6>
+                  <p class="small text-muted mb-0">Museum-grade Belgian linen and 100+ year lightfast artist pigments.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-eye"></i></div>
+                  <h6 class="fw-bold mb-1">Milestone Proofing</h6>
+                  <p class="small text-muted mb-0">Review high-resolution digital drafts before final varnishing.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-soft h-100">
+                  <div class="text-brand fs-4 mb-2"><i class="bi bi-award"></i></div>
+                  <h6 class="fw-bold mb-1">Certificate of Provenance</h6>
+                  <p class="small text-muted mb-0">Numbered Certificate of Authenticity signed and dated by the artist.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: STEP-BY-STEP ORDERING PROCESS
+         ====================================================================== -->
+    <section class="section" id="processSteps">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-signpost-split"></i> Step-by-Step Pathway</span>
+          <h2 class="section-title">Simple 5-Stage Process</h2>
+          <p class="section-subtitle">From phone snapshots to museum-grade delivery.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <!-- Simple & Clean 5-Stage Process Cards Grid -->
+        <div class="clean-process-row">
+          <!-- Step 01 -->
+          <div class="clean-process-card">
+            <div class="clean-process-thumb">
+              <span class="clean-process-badge-num">STAGE 01</span>
+              <span class="clean-process-time-pill"><i class="bi bi-clock me-1"></i>Within 24h</span>
+              <img src="assets/images/process/proc_step_photos.jpg" alt="Professional studio photography session with two dogs and lighting softboxes" loading="lazy">
+            </div>
+            <div class="clean-process-body">
+              <div>
+                <h3 class="clean-process-title">Photo Reference Audit</h3>
+                <p class="clean-process-desc">Submit 2–4 favorite smartphone photos. Our master artist reviews lighting, iris clarity, and expression to choose the best angle.</p>
+              </div>
+              <a href="#processGuidance" class="clean-process-btn">
+                <span>Photo Guide</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="clean-process-card">
+            <div class="clean-process-thumb">
+              <span class="clean-process-badge-num">STAGE 02</span>
+              <span class="clean-process-time-pill"><i class="bi bi-palette me-1"></i>Day 1–2</span>
+              <img src="assets/images/process/proc_step_medium.jpg" alt="Fine art painting study of white cat resting on embroidered floral quilt" loading="lazy">
+            </div>
+            <div class="clean-process-body">
+              <div>
+                <h3 class="clean-process-title">Medium & Sizing</h3>
+                <p class="clean-process-desc">Select your preferred medium: Dutch oil on linen, luminous botanical watercolor, graphite pencil, or textured acrylic with custom dimensions.</p>
+              </div>
+              <a href="#processOptions" class="clean-process-btn">
+                <span>View Options</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="clean-process-card">
+            <div class="clean-process-thumb">
+              <span class="clean-process-badge-num">STAGE 03</span>
+              <span class="clean-process-time-pill"><i class="bi bi-pencil me-1"></i>Day 3</span>
+              <img src="assets/images/process/proc_step_palette.jpg" alt="Artist hand sketching expressive terrier portrait with colored pencil" loading="lazy">
+            </div>
+            <div class="clean-process-body">
+              <div>
+                <h3 class="clean-process-title">Palette & Sketch Lock</h3>
+                <p class="clean-process-desc">Approve a preliminary layout draft and customized color palette tailored to harmonize with your living space before brush touches canvas.</p>
+              </div>
+              <a href="#processFaq" class="clean-process-btn">
+                <span>Agreement Details</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="clean-process-card">
+            <div class="clean-process-thumb">
+              <span class="clean-process-badge-num">STAGE 04</span>
+              <span class="clean-process-time-pill"><i class="bi bi-brush me-1"></i>7–14 Days</span>
+              <img src="assets/images/process/proc_step_painting.jpg" alt="Vibrant multi-colored dog portrait painting canvas in studio" loading="lazy">
+            </div>
+            <div class="clean-process-body">
+              <div>
+                <h3 class="clean-process-title">Hand Painting & Previews</h3>
+                <p class="clean-process-desc">Physical layer-by-layer painting with archival pigments. Receive high-res progress photos midway for feedback and fine adjustments.</p>
+              </div>
+              <a href="#processIntro" class="clean-process-btn">
+                <span>Proofing Standards</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="clean-process-card">
+            <div class="clean-process-thumb">
+              <span class="clean-process-badge-num">STAGE 05</span>
+              <span class="clean-process-time-pill"><i class="bi bi-box-seam me-1"></i>3–5 Days</span>
+              <img src="assets/images/process/proc_step_delivery.jpg" alt="Fine artist painting brown pointer dog on studio easel with brush" loading="lazy">
+            </div>
+            <div class="clean-process-body">
+              <div>
+                <h3 class="clean-process-title">Museum Seal & Delivery</h3>
+                <p class="clean-process-desc">UV satin varnished, paired with a signed Certificate of Provenance, and white-glove boxed in reinforced packaging with fully insured transit.</p>
+              </div>
+              <a href="contact.html?type=commission" class="clean-process-btn">
+                <span>Start Commission</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: PET PHOTO AND REFERENCE-IMAGE GUIDANCE
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="processGuidance">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-camera"></i> Photography Guidance</span>
+          <h2 class="section-title">Photo Reference Guide</h2>
+          <p class="section-subtitle">
+            Everyday smartphone photos work best in natural light at eye level.
+          </p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tip 1: Natural Daylight -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="guidance-card">
+              <div class="guidance-thumb">
+                <span class="guidance-tag"><i class="bi bi-sun me-1"></i>Lighting</span>
+                <img src="assets/images/process/proc_guide_light.jpg" alt="Golden Labrador in Natural Ambient Sunlight" loading="eager">
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-bold fs-6 mb-2">Natural Daylight</h5>
+                  <p class="small text-muted mb-0">
+                    Snap near a window or outdoors. Avoid harsh camera flash.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tip 2: Eye-Level Perspective -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="guidance-card">
+              <div class="guidance-thumb">
+                <span class="guidance-tag"><i class="bi bi-person-standing me-1"></i>Angle</span>
+                <img src="assets/images/process/proc_guide_angle.jpg" alt="Olive dog portrait photographed at eye level" loading="eager">
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-bold fs-6 mb-2">Eye-Level Angle</h5>
+                  <p class="small text-muted mb-0">
+                    Sit at your pet's eye level for authentic, natural proportions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tip 3: Sharp Iris Focus -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="guidance-card">
+              <div class="guidance-thumb">
+                <span class="guidance-tag"><i class="bi bi-eye me-1"></i>Focus</span>
+                <img src="assets/images/process/proc_guide_focus.jpg" alt="Artist fine brush painting sharp eye reflection and iris detail" loading="eager">
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-bold fs-6 mb-2">Sharp Eye Focus</h5>
+                  <p class="small text-muted mb-0">
+                    Focus clearly on the eyes to capture their gaze and whiskers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tip 4: Multiple Snapshots -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="guidance-card">
+              <div class="guidance-thumb">
+                <span class="guidance-tag"><i class="bi bi-images me-1"></i>Angles</span>
+                <img src="assets/images/process/proc_guide_multi.jpg" alt="Multiple Pet Poses and Angles" loading="lazy">
+              </div>
+              <div class="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-bold fs-6 mb-2">Multiple Photos</h5>
+                  <p class="small text-muted mb-0">
+                    Send 2–4 photos showing coat color, markings, and expression.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 p-4 bg-surface rounded-4 border border-soft text-center mx-auto" style="max-width: 820px;">
+          <h6 class="fw-bold text-ink mb-1"><i class="bi bi-heart-pulse text-brand me-2"></i>Have older or memorial photos?</h6>
+          <p class="small text-muted mb-0">
+            Our artists can combine and restore older snapshots into one cohesive, beautiful portrait.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: MEDIUM, SIZE, AND CUSTOMIZATION OPTIONS
+         ====================================================================== -->
+    <section class="section" id="processOptions">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-aspect-ratio"></i> Sizing & Pricing</span>
+          <h2 class="section-title">Canvas Sizing & Formats</h2>
+          <p class="section-subtitle">Standard formats designed for desks, shelves, and gallery walls.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tier 1: Desk & Shelf -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="tier-card">
+              <div class="tier-size">Desk & Shelf</div>
+              <div class="tier-subtitle">8" × 10" or 10" × 12" Canvas</div>
+              <div class="tier-price-box">
+                <span class="tier-price-start">Starting From</span>
+                <span class="tier-price-amount">$180</span>
+              </div>
+              <p class="small text-muted mb-3 flex-grow-1">
+                Intimate scale for desks, bedside tables, and shelves.
+              </p>
+              <ul class="list-unstyled small text-muted border-top pt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Single pet face & bust</li>
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Watercolor & Charcoal</li>
+                <li><i class="bi bi-clock-history text-brand me-1"></i>7–12 days studio production</li>
+              </ul>
+              <a href="contact.html?size=desk" class="btn btn-outline-brand btn-sm w-100">Select Desk Size</a>
+            </div>
+          </div>
+
+          <!-- Tier 2: Classic Wall (Featured) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="tier-card featured">
+              <span class="tier-popular-badge">Most Popular</span>
+              <div class="tier-size">Classic Wall</div>
+              <div class="tier-subtitle">12" × 16" or 16" × 20" Canvas</div>
+              <div class="tier-price-box">
+                <span class="tier-price-start">Starting From</span>
+                <span class="tier-price-amount">$240</span>
+              </div>
+              <p class="small text-muted mb-3 flex-grow-1">
+                Our most popular format for balanced wall presence.
+              </p>
+              <ul class="list-unstyled small text-muted border-top pt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Single or dual pets</li>
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Available in all 4 mediums</li>
+                <li><i class="bi bi-clock-history text-brand me-1"></i>10–14 days production</li>
+              </ul>
+              <a href="contact.html?size=classic" class="btn btn-brand btn-sm w-100">Select Classic Wall</a>
+            </div>
+          </div>
+
+          <!-- Tier 3: Grand Statement -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="tier-card">
+              <div class="tier-size">Grand Statement</div>
+              <div class="tier-subtitle">20" × 24" or 24" × 30" Canvas</div>
+              <div class="tier-price-box">
+                <span class="tier-price-start">Starting From</span>
+                <span class="tier-price-amount">$340</span>
+              </div>
+              <p class="small text-muted mb-3 flex-grow-1">
+                Commanding focal point for living rooms and fireplaces.
+              </p>
+              <ul class="list-unstyled small text-muted border-top pt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Full body pose or 2–3 pets</li>
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Oil, Acrylic & Charcoal</li>
+                <li><i class="bi bi-clock-history text-brand me-1"></i>14–18 days production</li>
+              </ul>
+              <a href="contact.html?size=grand" class="btn btn-outline-brand btn-sm w-100">Select Grand Size</a>
+            </div>
+          </div>
+
+          <!-- Tier 4: Monumental Estate -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="tier-card">
+              <div class="tier-size">Monumental Estate</div>
+              <div class="tier-subtitle">30" × 40" or 36" × 48" Canvas</div>
+              <div class="tier-price-box">
+                <span class="tier-price-start">Starting From</span>
+                <span class="tier-price-amount">$480</span>
+              </div>
+              <p class="small text-muted mb-3 flex-grow-1">
+                Museum-scale format for expansive spaces and families.
+              </p>
+              <ul class="list-unstyled small text-muted border-top pt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Multi-pet families & horses</li>
+                <li class="mb-2"><i class="bi bi-check2 text-brand me-1"></i>Belgian linen canvas</li>
+                <li><i class="bi bi-clock-history text-brand me-1"></i>3–4 weeks production</li>
+              </ul>
+              <a href="contact.html?size=monumental" class="btn btn-outline-brand btn-sm w-100">Select Estate Size</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customization Add-On Studio Row -->
+        <div class="row g-3 mt-4 align-items-stretch">
+          <div class="col-6 col-lg-3">
+            <div class="p-3 p-md-4 bg-surface rounded-3 border border-soft text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="text-brand fs-3 mb-2"><i class="bi bi-people-fill"></i></div>
+              <h6 class="fw-bold mb-1">Multi-Pet Composition</h6>
+              <p class="small text-muted mb-0">Combine separate photos onto one canvas (+$60).</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="p-3 p-md-4 bg-surface rounded-3 border border-soft text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="text-brand fs-3 mb-2"><i class="bi bi-gem"></i></div>
+              <h6 class="fw-bold mb-1">24K Gold Leaf</h6>
+              <p class="small text-muted mb-0">Hand-burnished genuine Italian gold leaf (+$45).</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="p-3 p-md-4 bg-surface rounded-3 border border-soft text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="text-brand fs-3 mb-2"><i class="bi bi-bounding-box-circles"></i></div>
+              <h6 class="fw-bold mb-1">Hardwood Frame</h6>
+              <p class="small text-muted mb-0">Solid walnut, natural oak, or gallery black (+$95).</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="p-3 p-md-4 bg-surface rounded-3 border border-soft text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="text-brand fs-3 mb-2"><i class="bi bi-award-fill"></i></div>
+              <h6 class="fw-bold mb-1">Memorial Plaque</h6>
+              <p class="small text-muted mb-0">Custom engraved brass dedication plaque (+$35).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: DELIVERY EXPECTATIONS AND COMMISSION QUESTIONS (FAQ)
+         ====================================================================== -->
+    <section class="section bg-surface-2" id="processFaq">
+      <div class="container">
+        <div class="section-head center mb-5">
+          <span class="eyebrow"><i class="bi bi-question-circle"></i> Clear Policies</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Answers regarding timelines, photo suitability, and insured delivery.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion accordion-atelier" id="commissionAccordion">
+              
+              <!-- FAQ 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is the expected delivery timeframe?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    Digital: 5–7 days. Charcoal & Watercolor: 7–12 days. Acrylic & Oil: 2–4 weeks. Express gift dates can be accommodated upon request.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Can you work with older or memorial photos?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    Yes. We specialize in memorial tributes and can combine or enhance older, soft-focus photos into a beautiful, sharp portrait.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Can you combine pets photographed separately?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    Yes. Over 40% of our commissions combine multiple pets into one harmonious composition with natural lighting and eye alignment.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How does the proofing and revision process work?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    You receive high-resolution digital previews before varnishing to request adjustments until you are completely satisfied.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How is artwork packaged and shipped?
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    Portraits are sealed in acid-free glassine, reinforced with corner armor, and shipped fully insured with door-to-door tracking.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    What is the deposit and payment structure?
+                  </button>
+                </h3>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#commissionAccordion">
+                  <div class="accordion-body">
+                    A 50% deposit begins production. The final 50% balance is only invoiced after you review and approve the completed painting.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: COMMISSION CTA BANNER
+         ====================================================================== -->
+    <section class="section py-4" id="processCta">
+      <div class="container">
+        <div class="offer-banner" data-countdown="2026-11-30T23:59:59">
+          <div class="ob-inner">
+            <div>
+              <span class="ob-tag"><i class="bi bi-calendar-check"></i> Monthly Commission Queue</span>
+              <h2>Reserve Your Bespoke Portrait Slot</h2>
+              <p>To preserve personal attention and museum-grade artistry, PawTrait Atelier accepts only 12 commissions per monthly cycle. Send us your favorite snapshots today for a free composition review.</p>
+              
+              <div class="d-flex flex-wrap gap-4 align-items-center">
+                <div class="countdown" aria-label="Countdown to next slot closing">
+                  <div class="cd-box"><div class="cd-num cd-days">14</div><div class="cd-label">Days</div></div>
+                  <div class="cd-box"><div class="cd-num cd-hours">08</div><div class="cd-label">Hours</div></div>
+                  <div class="cd-box"><div class="cd-num cd-mins">42</div><div class="cd-label">Mins</div></div>
+                  <div class="cd-box"><div class="cd-num cd-secs">15</div><div class="cd-label">Secs</div></div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="contact.html?type=commission" class="btn btn-brand btn-lg">
+                    <i class="bi bi-pencil-square me-2"></i>Request Consultation
+                  </a>
+                  <a href="portfolio.html" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-images me-2"></i>Explore Gallery
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Provenance Stamp -->
+            <div class="discount-stamp" aria-hidden="true">
+              <strong>12</strong>
+              <span>MONTHLY<br>QUEUE SLOTS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Atelier Shared Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

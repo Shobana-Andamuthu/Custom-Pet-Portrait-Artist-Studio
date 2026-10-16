@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paw & Brush — Handcrafted, bespoke custom pet portrait fine art. Oil, watercolor, pencil, and acrylic portraits honoring beloved companions with museum-grade archival materials.">
+  <meta name="keywords" content="custom pet portraits, hand-painted dog portraits, cat watercolor painting, pet artist studio, custom animal art, pet memorial painting">
+  <meta name="author" content="Paw & Brush">
+  <title>Paw & Brush — Custom Pet Portrait Artist Studio | Home 1</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Paw & Brush — Timeless Hand-Painted Pet Portraits">
+  <meta property="og:description" content="Your Pet's Story, Beautifully Painted. Capturing your companion's distinct soul, warmth, and grace on museum-grade canvas.">
+  <meta property="og:image" content="assets/images/logo/logo.png">
+
+  <!-- Google Fonts: Playfair Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 + Bootstrap Icons (data-bs-css dynamically swapped for RTL build) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" data-bs-css>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Shared Atelier Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Pre-paint Theme & RTL Restoration (Prevents FOUC) -->
+  <script>
+    (function () {
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var qTheme = urlParams.get("theme");
+        var qDir = urlParams.get("dir");
+        var t = qTheme || localStorage.getItem("pet-portrait-theme");
+        if (t) {
+          document.documentElement.setAttribute("data-bs-theme", t);
+        }
+        var r = qDir || localStorage.getItem("pet-portrait-dir");
+        if (r) {
+          document.documentElement.setAttribute("dir", r);
+          if (r === "rtl") {
+            var l = document.querySelector("link[data-bs-css]");
+            if (l) l.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Preloader — Handcrafted Atelier Presentation -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading Paw & Brush">
+    <div class="preloader-inner">
+      <div class="preloader-emblem">
+        <div class="preloader-spin-ring"></div>
+        <div class="preloader-badge-center">
+          <img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="preloader-logo-img" width="100" height="100">
+        </div>
+      </div>
+      <div class="preloader-brand">
+        <span class="preloader-title">PAW &amp; <span class="text-brand">BRUSH</span></span>
+        <span class="preloader-subtitle">Custom Pet Portrait Studio</span>
+        <span class="preloader-slogan">Your Pet's Story, Beautifully Painted</span>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-caption">
+        <i class="bi bi-brush text-brand me-1"></i> Handcrafting Masterworks...
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Navbar (Injected by assets/js/navbar.js) -->
+  <div id="navbar-container"></div>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO (SPLIT SHOWCASE)
+         ========================================================================== -->
+    <section class="h1-hero" id="hero">
+      <span class="h1-blob a" aria-hidden="true"></span>
+      <span class="h1-blob b" aria-hidden="true"></span>
+
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-5 py-2">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <span class="hero-badge">
+              <i class="bi bi-brush-fill"></i> Bespoke Companion Fine Art
+            </span>
+
+            <h1 class="hero-title">
+              Timeless Pet Portraits, <span class="accent">Painted With Soul</span>
+            </h1>
+
+            <p class="hero-lead">
+              Transform your companion's spirit into an archival fine art portrait, hand-painted in oil, watercolor, pencil, or acrylic.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 align-items-center mb-4 hero-cta-group">
+              <a href="contact.html" class="btn btn-brand btn-lg" id="heroCommissionBtn">
+                <i class="bi bi-palette-fill me-2"></i>Commission a Portrait
+              </a>
+              <a href="portfolio.html" class="btn btn-soft btn-lg" id="heroExploreBtn">
+                <i class="bi bi-images me-2"></i>Explore Master Gallery
+              </a>
+            </div>
+
+            <!-- Live Atelier Stats -->
+            <div class="h1-stats">
+              <div class="counter-box">
+                <div class="counter" data-target="1450">0<span class="counter-suffix">+</span></div>
+                <div class="counter-label">Commissions Painted</div>
+              </div>
+              <div class="counter-box">
+                <div class="counter" data-target="100">0<span class="counter-suffix">%</span></div>
+                <div class="counter-label">Archival Pigments</div>
+              </div>
+              <div class="counter-box">
+                <div class="counter" data-target="4.98">0<span class="counter-suffix">/5</span></div>
+                <div class="counter-label">Collector Rating</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Composition -->
+          <div class="col-lg-6">
+            <div class="h1-photo-wrap">
+              <div class="h1-frame">
+                <img src="assets/images/hero/h1_hero_retriever.jpg" alt="Masterpiece Golden Retriever oil painting on canvas" id="heroRetrieverImg" onerror="this.onerror=null;this.src='assets/images/logo/logo.jpg'">
+              </div>
+
+              <!-- Floating Review Card A -->
+              <div class="hero-float-card a" id="heroCardA">
+                <span class="icon"><i class="bi bi-hand-thumbs-up-fill"></i></span>
+                <div>
+                  <strong>Heirloom Quality</strong>
+                  <span>1,400+ 5-star reviews</span>
+                </div>
+              </div>
+
+              <!-- Floating Guarantee Card B -->
+              <div class="hero-float-card b" id="heroCardB">
+                <span class="icon"><i class="bi bi-award-fill"></i></span>
+                <div>
+                  <strong>Archival Longevity</strong>
+                  <span>100+ year lightfast</span>
+                </div>
+              </div>
+
+              <!-- Rotating Circular Seal Badge -->
+              <div class="rotating-badge" aria-hidden="true" id="heroRotatingSeal">
+                <svg viewBox="0 0 128 128" width="100%" height="100%">
+                  <circle cx="64" cy="64" r="62" fill="rgba(253, 251, 247, 0.96)" stroke="#C86241" stroke-width="1.8" stroke-dasharray="4 3"></circle>
+                  <path id="atelierBadgePath" fill="none" d="M 64,64 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"></path>
+                  <text fill="#C86241" font-size="8.8" letter-spacing="2.8" font-family="Outfit, sans-serif" font-weight="700">
+                    <textPath href="#atelierBadgePath">PAW &amp; BRUSH &bull; EST. 2018 &bull; </textPath>
+                  </text>
+                </svg>
+                <span class="center-icon"><i class="bi bi-palette-fill"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: FEATURED COMMISSIONED PORTRAIT GALLERY
+         ========================================================================== -->
+    <section class="section" id="featuredGallery">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-stars"></i> Collector Masterworks</span>
+          <h2 class="section-title">Featured Portraits</h2>
+          <p class="section-subtitle">Custom artworks created for devoted pet parents worldwide.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Featured 1: German Shepherd Oil -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Oil on Linen</span>
+                <img src="assets/images/portraits/feat_shepherd_oil.jpg" alt="German Shepherd regal oil painting on canvas" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Kaiser the Noble</h3>
+                <div class="portrait-pet">German Shepherd &bull; 24 &times; 30 inches</div>
+                <p class="small text-muted mb-3">Rich impasto depicting dignified posture and expressive amber eyes.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Commissioned 2026</span>
+                  <span class="portrait-price">From $450</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 2: Tabby Cat Botanical Watercolor -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Watercolor</span>
+                <img src="assets/images/portraits/feat_tabby_watercolor.jpg" alt="Ginger Tabby Cat botanical watercolor painting" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Milo in the Sunlit Garden</h3>
+                <div class="portrait-pet">Ginger Tabby Cat &bull; 16 &times; 20 inches</div>
+                <p class="small text-muted mb-3">Luminous botanical washes with delicate whisker and eye details.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Commissioned 2026</span>
+                  <span class="portrait-price">From $320</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 3: French Bulldog Textured Acrylic -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Modern Acrylic</span>
+                <img src="assets/images/portraits/feat_frenchie_acrylic.jpg" alt="French Bulldog modern acrylic textured painting" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Winston the Dapper</h3>
+                <div class="portrait-pet">French Bulldog &bull; 18 &times; 24 inches</div>
+                <p class="small text-muted mb-3">Bold textured impasto highlighting expressive ears and playful posture.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Commissioned 2026</span>
+                  <span class="portrait-price">From $380</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 4: Friesian Horse Charcoal Pencil -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Pencil &amp; Charcoal</span>
+                <img src="assets/images/portraits/feat_horse_pencil.jpg" alt="Friesian Horse detailed graphite and charcoal drawing" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Shadowfax of the Moors</h3>
+                <div class="portrait-pet">Friesian Stallion &bull; 20 &times; 24 inches</div>
+                <p class="small text-muted mb-3">Velvety shading and fine graphite hatching capturing muscular grace.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Commissioned 2026</span>
+                  <span class="portrait-price">From $290</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="portfolio.html" class="btn btn-brand btn-lg">
+            <i class="bi bi-grid-3x3-gap-fill me-2"></i>View Full Portfolio Archive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: PORTRAIT MEDIUMS (WATERCOLOR, PENCIL, ACRYLIC, DIGITAL)
+         ========================================================================== -->
+    <section class="section bg-surface-2" id="portraitMediums">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-palette2"></i> Artistic Craftsmanship</span>
+          <h2 class="section-title">Four Signature Mediums</h2>
+          <p class="section-subtitle">Tailored expressions for every pet's coat and spirit.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Medium 1: Watercolor -->
+          <div class="col-md-6 col-lg-3">
+            <div class="medium-card">
+              <div class="medium-media">
+                <span class="medium-badge">Watercolor</span>
+                <img src="assets/images/portraits/medium_watercolor_beagle.jpg" alt="Beagle puppy soft watercolor painting" loading="lazy">
+              </div>
+              <div class="medium-body">
+                <h3 class="medium-title">Botanical Watercolor</h3>
+                <p class="medium-desc">Fluid washes on 300gsm cotton rag for gentle fur gradients.</p>
+                <div class="medium-tags">
+                  <span class="medium-tag">Arches Cotton</span>
+                  <span class="medium-tag">Soft Washes</span>
+                </div>
+                <a href="contact.html?medium=watercolor" class="btn btn-soft btn-sm mt-auto w-100">
+                  <i class="bi bi-droplet-half me-1"></i>Select Watercolor
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium 2: Pencil & Charcoal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="medium-card">
+              <div class="medium-media">
+                <span class="medium-badge">Pencil &amp; Charcoal</span>
+                <img src="assets/images/portraits/medium_pencil_collie.jpg" alt="Border Collie graphite pencil sketch" loading="lazy">
+              </div>
+              <div class="medium-body">
+                <h3 class="medium-title">Graphite &amp; Pencil</h3>
+                <p class="medium-desc">Monochromatic depth and fine line detail for timeless elegance.</p>
+                <div class="medium-tags">
+                  <span class="medium-tag">Fine Line</span>
+                  <span class="medium-tag">Monochrome</span>
+                </div>
+                <a href="contact.html?medium=pencil" class="btn btn-soft btn-sm mt-auto w-100">
+                  <i class="bi bi-pencil me-1"></i>Select Pencil
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium 3: Acrylic -->
+          <div class="col-md-6 col-lg-3">
+            <div class="medium-card">
+              <div class="medium-media">
+                <span class="medium-badge">Textured Acrylic</span>
+                <img src="assets/images/portraits/medium_acrylic_corgi.jpg" alt="Welsh Corgi vibrant textured acrylic painting" loading="lazy">
+              </div>
+              <div class="medium-body">
+                <h3 class="medium-title">Textured Acrylic</h3>
+                <p class="medium-desc">Bold impasto strokes on gallery canvas for spirited pets.</p>
+                <div class="medium-tags">
+                  <span class="medium-tag">Impasto</span>
+                  <span class="medium-tag">Gallery Canvas</span>
+                </div>
+                <a href="contact.html?medium=acrylic" class="btn btn-soft btn-sm mt-auto w-100">
+                  <i class="bi bi-brush me-1"></i>Select Acrylic
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium 4: Digital Fine Art -->
+          <div class="col-md-6 col-lg-3">
+            <div class="medium-card">
+              <div class="medium-media">
+                <span class="medium-badge">Digital Fine Art</span>
+                <img src="assets/images/portraits/medium_digital_siamese.jpg" alt="Regal Siamese cat digital painting with painterly brushwork" loading="lazy">
+              </div>
+              <div class="medium-body">
+                <h3 class="medium-title">Digital Fine Art</h3>
+                <p class="medium-desc">Stylus fine art giclée on 100% cotton archival paper.</p>
+                <div class="medium-tags">
+                  <span class="medium-tag">Cotton Etching</span>
+                  <span class="medium-tag">Giclée Archival</span>
+                </div>
+                <a href="contact.html?medium=digital" class="btn btn-soft btn-sm mt-auto w-100">
+                  <i class="bi bi-display me-1"></i>Select Digital
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: RECENT ARTWORK COLLECTION
+         ========================================================================== -->
+    <section class="section" id="recentArtwork">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-clock-history"></i> Fresh From The Easel</span>
+          <h2 class="section-title">Recent Commissions</h2>
+          <p class="section-subtitle">Recent bespoke commissions delivered to collectors worldwide.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Recent 1: Cavalier -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Oil on Linen</span>
+                <img src="assets/images/portraits/recent_cavalier.jpg" alt="Cavalier King Charles Spaniel warm oil painting" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Barnaby of St. Jude</h3>
+                <div class="portrait-pet">Cavalier Spaniel &bull; Seattle, WA</div>
+                <p class="small text-muted mb-3">Warm oil glazes capturing floppy ears and a loving gaze.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Oct 2026</span>
+                  <span class="portrait-price">20 &times; 24"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent 2: White Persian -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Classic Oil</span>
+                <img src="assets/images/portraits/recent_persian.jpg" alt="White Persian Cat classical oil portrait" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Duchess Penelope</h3>
+                <div class="portrait-pet">Persian Cat &bull; London, UK</div>
+                <p class="small text-muted mb-3">Lush white fur rendered with multi-layered glazes.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Oct 2026</span>
+                  <span class="portrait-price">18 &times; 24"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent 3: Bernese Mountain Dog -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Heirloom Oil</span>
+                <img src="assets/images/portraits/recent_bernese.jpg" alt="Bernese Mountain Dog oil painting in ornate gold frame" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Bruno the Giant</h3>
+                <div class="portrait-pet">Bernese Mountain Dog &bull; Zurich, CH</div>
+                <p class="small text-muted mb-3">Noble portraiture depicting tricolor coat and calm expression.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Oct 2026</span>
+                  <span class="portrait-price">24 &times; 36"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent 4: Dachshund -->
+          <div class="col-md-6 col-lg-3">
+            <div class="portrait-card">
+              <div class="portrait-media">
+                <span class="portrait-badge">Watercolor</span>
+                <img src="assets/images/portraits/recent_dachshund.jpg" alt="Expressive Dachshund portrait in nature" loading="lazy">
+              </div>
+              <div class="portrait-body">
+                <h3 class="portrait-title">Otto the Spirited</h3>
+                <div class="portrait-pet">Dachshund &bull; Austin, TX</div>
+                <p class="small text-muted mb-3">Warm earthy tones capturing curious eyes and lively spirit.</p>
+                <div class="portrait-meta">
+                  <span class="text-muted small">Oct 2026</span>
+                  <span class="portrait-price">14 &times; 18"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: WHY CHOOSE A CUSTOM PET PORTRAIT (THE ATELIER DIFFERENCE)
+         ========================================================================== -->
+    <section class="section bg-surface-2" id="whyChooseUs">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-shield-check"></i> The Atelier Standard</span>
+          <h2 class="section-title">Why Commission With Us</h2>
+          <p class="section-subtitle">Our commitments to fine art authenticity and craftsmanship.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">01</span>
+              <div class="feature-icon"><i class="bi bi-brush"></i></div>
+              <h3 class="h5 fw-bold mb-2">100% Hand-Painted</h3>
+              <p class="small text-muted mb-0">Created by hand from blank canvas—never automated filters or apps.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">02</span>
+              <div class="feature-icon"><i class="bi bi-award"></i></div>
+              <h3 class="h5 fw-bold mb-2">100+ Year Longevity</h3>
+              <p class="small text-muted mb-0">Artist single-pigments, acid-free rag, and fine Belgian linen.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">03</span>
+              <div class="feature-icon"><i class="bi bi-eye"></i></div>
+              <h3 class="h5 fw-bold mb-2">Soulful Character</h3>
+              <p class="small text-muted mb-0">We capture your pet's authentic gaze, muscle structure, and spirit.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">04</span>
+              <div class="feature-icon"><i class="bi bi-camera"></i></div>
+              <h3 class="h5 fw-bold mb-2">Free Photo Review</h3>
+              <p class="small text-muted mb-0">Complimentary evaluation of photo lighting, angle, and pose.</p>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">05</span>
+              <div class="feature-icon"><i class="bi bi-images"></i></div>
+              <h3 class="h5 fw-bold mb-2">Milestone Previews</h3>
+              <p class="small text-muted mb-0">Review digital progress snapshots and approve before varnishing.</p>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box">
+              <span class="feature-number">06</span>
+              <div class="feature-icon"><i class="bi bi-box-seam"></i></div>
+              <h3 class="h5 fw-bold mb-2">Insured Art Crating</h3>
+              <p class="small text-muted mb-0">Enclosed in protective glassine armor with full transit insurance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: HOW THE COMMISSION PROCESS WORKS
+         ========================================================================== -->
+    <section class="section" id="howItWorks">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-signpost-split"></i> Step-By-Step Journey</span>
+          <h2 class="section-title">How Your Commission Unfolds</h2>
+          <p class="section-subtitle">From phone snapshot to heirloom masterwork.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row align-items-stretch g-5">
+          <!-- Left Column: Steps -->
+          <div class="col-lg-6 d-flex flex-column justify-content-between">
+            <div class="process-steps-list">
+              <div class="process-step-item">
+                <div class="process-step-num">1</div>
+                <div class="process-step-content">
+                  <h3 class="h5 fw-bold mb-1">Submit Photos &amp; Choose Medium</h3>
+                  <p class="small text-muted mb-0">Upload photos and select your medium and canvas size.</p>
+                </div>
+              </div>
+
+              <div class="process-step-item">
+                <div class="process-step-num">2</div>
+                <div class="process-step-content">
+                  <h3 class="h5 fw-bold mb-1">Artist Consultation</h3>
+                  <p class="small text-muted mb-0">Confirm composition, palette tones, and framing.</p>
+                </div>
+              </div>
+
+              <div class="process-step-item">
+                <div class="process-step-num">3</div>
+                <div class="process-step-content">
+                  <h3 class="h5 fw-bold mb-1">Studio Creation</h3>
+                  <p class="small text-muted mb-0">Painted by hand over 1–3 weeks with fine detail.</p>
+                </div>
+              </div>
+
+              <div class="process-step-item">
+                <div class="process-step-num">4</div>
+                <div class="process-step-content">
+                  <h3 class="h5 fw-bold mb-1">Digital Proofing</h3>
+                  <p class="small text-muted mb-0">Review high-resolution previews and request adjustments.</p>
+                </div>
+              </div>
+
+              <div class="process-step-item">
+                <div class="process-step-num">5</div>
+                <div class="process-step-content">
+                  <h3 class="h5 fw-bold mb-1">Varnishing &amp; Delivery</h3>
+                  <p class="small text-muted mb-0">Protective UV varnish seal and insured shipping to your door.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-1">
+              <a href="commission-process.html" class="btn btn-outline-brand">
+                <i class="bi bi-arrow-right-circle me-2"></i>Read Detailed Commission Guide
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Feature -->
+          <div class="col-lg-6 d-flex flex-column">
+            <div class="h1-frame process-frame shadow-lg h-100">
+              <img src="assets/images/process/studio_process_easel.jpg" alt="Artist palette and canvas easel in fine art studio" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: CUSTOMER TESTIMONIAL CARDS
+         ========================================================================== -->
+    <section class="section bg-surface-2" id="testimonials">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><i class="bi bi-chat-heart"></i> Collector Stories</span>
+          <h2 class="section-title">Words From Pet Parents</h2>
+          <p class="section-subtitle">Real experiences from families who entrusted their beloved companions' memory and spirit to our studio.</p>
+          <div class="divider-brand"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "When I unboxed Daisy's oil painting, I burst into happy tears. The brushwork captured that gentle, knowing spark in her eyes that a camera never could. It now hangs prominently above our fireplace."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/reviews/reviewer_sarah.jpg" alt="Sarah Jenkins" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <h4 class="h6 fw-bold mb-0">Sarah Jenkins</h4>
+                  <span class="small text-muted">Golden Retriever "Daisy" &bull; Oil on Linen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "I commissioned a charcoal sketch of our rescue hound Jasper for my husband's 40th birthday. The tonal depth in his ears and whiskers is breathtaking. The progress updates along the way made it so special."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/reviews/reviewer_marcus.jpg" alt="Marcus Vance" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <h4 class="h6 fw-bold mb-0">Marcus Vance</h4>
+                  <span class="small text-muted">Rescue Hound "Jasper" &bull; Charcoal Drawing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Losing Oliver was heartbreaking, but having this watercolor hanging in our study feels like he is still resting in his favorite morning sunbeam. The colors and paper quality are absolutely exceptional."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/reviews/reviewer_elena.jpg" alt="Elena Rostova" class="testimonial-avatar" loading="lazy">
+                <div>
+                  <h4 class="h6 fw-bold mb-0">Elena Rostova</h4>
+                  <span class="small text-muted">Russian Blue "Oliver" &bull; Botanical Watercolor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: FINAL CTA BANNER & COUNTDOWN
+         ========================================================================== -->
+    <section class="section py-4" id="finalCta">
+      <div class="container">
+        <div class="offer-banner" data-countdown="2026-11-30T23:59:59">
+          <div class="ob-inner">
+            <div>
+              <span class="ob-tag"><i class="bi bi-hourglass-split"></i> Seasonal Studio Availability</span>
+              <h2>Limited Commission Slots Open</h2>
+              <p>Due to the meticulous hand-painted nature of each original piece, our atelier accepts only 8 bespoke commissions per monthly cycle to ensure museum-level attention to detail.</p>
+              
+              <div class="d-flex flex-wrap gap-4 align-items-center">
+                <div class="countdown" aria-label="Countdown to next slot closing">
+                  <div class="cd-box"><div class="cd-num cd-days">14</div><div class="cd-label">Days</div></div>
+                  <div class="cd-box"><div class="cd-num cd-hours">08</div><div class="cd-label">Hours</div></div>
+                  <div class="cd-box"><div class="cd-num cd-mins">42</div><div class="cd-label">Mins</div></div>
+                  <div class="cd-box"><div class="cd-num cd-secs">15</div><div class="cd-label">Secs</div></div>
+                </div>
+
+                <a href="contact.html" class="btn btn-brand btn-lg" id="finalCtaBtn">
+                  <i class="bi bi-brush-fill me-2"></i>Reserve Your Portrait Slot
+                </a>
+              </div>
+            </div>
+
+            <!-- Provenance Stamp -->
+            <div class="discount-stamp" aria-hidden="true">
+              <strong>100%</strong>
+              <span>ORIGINAL<br>HAND-PAINTED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer (Injected by assets/js/footer.js) -->
+  <div id="footer-container"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
