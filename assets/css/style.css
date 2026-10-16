@@ -659,24 +659,45 @@ img {
   gap: 0.75rem;
   transition: all 0.2s ease;
 }
+@media (min-width: 992px) {
+  .custom-nav-dropdown:hover .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
 .custom-nav-dropdown .dropdown-item i {
   font-size: 1.1rem;
   color: var(--brand);
 }
 .custom-nav-dropdown .dropdown-item .item-title {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--ink);
 }
 .custom-nav-dropdown .dropdown-item .item-desc {
   display: block;
-  font-size: 0.75rem;
-  color: var(--muted);
-  font-weight: 400;
+  font-size: 0.76rem;
+  color: #6A5E57;
+  font-weight: 500;
 }
 .custom-nav-dropdown .dropdown-item:hover,
 .custom-nav-dropdown .dropdown-item.active {
-  background: var(--brand-surface);
-  color: var(--brand-dark);
+  background: var(--brand-gradient) !important;
+  color: #FFFFFF !important;
+}
+.custom-nav-dropdown .dropdown-item:hover .item-title,
+.custom-nav-dropdown .dropdown-item.active .item-title {
+  color: #FFFFFF !important;
+}
+.custom-nav-dropdown .dropdown-item:hover .item-desc,
+.custom-nav-dropdown .dropdown-item.active .item-desc {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.custom-nav-dropdown .dropdown-item:hover i,
+.custom-nav-dropdown .dropdown-item.active i {
+  color: #FFFFFF !important;
 }
 
 /* Unified Sizing for Header Action Buttons (Theme, RTL, Menu, CTA) */
@@ -1246,9 +1267,11 @@ section[id] {
   box-shadow: 0 2px 8px rgba(184, 83, 51, 0.28);
 }
 .badge.bg-dark {
-  background-color: var(--ink-deep) !important;
+  background-color: #1A1614 !important;
   color: #FFFFFF !important;
-  font-weight: 600;
+  font-weight: 700 !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .badge.bg-gold-light {
   background-color: var(--accent-gold-light) !important;
@@ -2148,13 +2171,19 @@ section[id] {
 }
 .feature-number {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
-  color: rgba(var(--brand-rgb), 0.15);
+  color: var(--brand);
+  opacity: 0.65;
   position: absolute;
   top: 18px;
   inset-inline-end: 22px;
   line-height: 1;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.feature-box:hover .feature-number {
+  opacity: 1;
+  transform: scale(1.05);
 }
 .feature-icon {
   width: 56px;
@@ -3185,26 +3214,34 @@ section[id] {
   opacity: 1;
 }
 .gallery-zoom-btn {
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--ink);
-  border: none;
-  width: 46px;
-  height: 46px;
+  background: #FFFFFF;
+  color: var(--brand-dark);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   transform: scale(0.8);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+.gallery-zoom-btn i {
+  color: #C86241 !important;
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
 }
 .gallery-card:hover .gallery-zoom-btn {
   transform: scale(1);
 }
 .gallery-zoom-btn:hover {
-  background: var(--brand);
-  color: #FFFFFF;
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+}
+.gallery-zoom-btn:hover i {
+  color: #FFFFFF !important;
 }
 
 .gallery-badge-medium {

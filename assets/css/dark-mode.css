@@ -143,10 +143,31 @@
 [data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item {
   color: #FBF8F4;
 }
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item .item-title {
+  color: #FBF8F4 !important;
+}
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item .item-desc {
+  color: #D6CBC2 !important;
+}
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item i {
+  color: #E2886A !important;
+}
 [data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item:hover,
 [data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item.active {
-  background: rgba(222, 123, 92, 0.18);
-  color: #ECA18A;
+  background: var(--brand-gradient) !important;
+  color: #FFFFFF !important;
+}
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item:hover .item-title,
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item.active .item-title {
+  color: #FFFFFF !important;
+}
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item:hover .item-desc,
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item.active .item-desc {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item:hover i,
+[data-bs-theme="dark"] .custom-nav-dropdown .dropdown-item.active i {
+  color: #FFFFFF !important;
 }
 
 /* Offcanvas in Dark */
@@ -193,6 +214,35 @@
   border-color: #2E2723;
   color: #DDD3CA;
 }
+[data-bs-theme="dark"] .feature-number {
+  color: #E2886A;
+  opacity: 0.8;
+}
+[data-bs-theme="dark"] .feature-box:hover .feature-number {
+  color: #F3B39F;
+  opacity: 1;
+}
+[data-bs-theme="dark"] .gallery-zoom-btn {
+  background: #28221E !important;
+  border: 1.5px solid rgba(222, 123, 92, 0.45) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6) !important;
+}
+[data-bs-theme="dark"] .gallery-zoom-btn i {
+  color: #DE7B5C !important;
+}
+[data-bs-theme="dark"] .gallery-zoom-btn:hover {
+  background: #DE7B5C !important;
+  border-color: #DE7B5C !important;
+}
+[data-bs-theme="dark"] .gallery-zoom-btn:hover i {
+  color: #FFFFFF !important;
+}
+[data-bs-theme="dark"] .badge.bg-dark {
+  background-color: #100E0D !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(222, 123, 92, 0.4) !important;
+}
 [data-bs-theme="dark"] .h1-frame {
   border-color: #28221E;
   background: #211B18;
@@ -200,6 +250,15 @@
 [data-bs-theme="dark"] .hero-float-card {
   background: rgba(33, 27, 24, 0.92);
   border-color: #3D342F;
+}
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-white.bg-opacity-95 {
+  background-color: rgba(33, 27, 24, 0.95) !important;
+  border-color: #3D342F !important;
+  color: #FBF8F4 !important;
+}
+[data-bs-theme="dark"] .border-light {
+  border-color: #3D342F !important;
 }
 [data-bs-theme="dark"] .hero-float-card strong {
   color: #FBF8F4;

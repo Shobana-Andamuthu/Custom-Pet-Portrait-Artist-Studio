@@ -167,7 +167,7 @@
 
             /* RTL Toggle (Hidden on mobile < 768px via CSS, active on >= 768px) */
             '<button type="button" class="rtl-toggle icon-btn d-none d-md-inline-flex" id="rtlToggle" title="Toggle RTL / LTR layout" aria-label="Toggle RTL layout">' +
-              '<i class="bi bi-text-right"></i>' +
+              '<i class="bi bi-arrow-left-right"></i>' +
             '</button>' +
 
             /* Commission Artwork CTA (Visible only on wide desktop >= 1400px) */
@@ -212,7 +212,7 @@
               '</div>' +
               '<div class="col-6 ps-1 pe-0">' +
                 '<button type="button" class="btn btn-soft w-100 rtl-toggle" id="rtlToggleMobile" style="height:44px;font-size:0.88rem;display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;">' +
-                  '<i class="bi bi-text-right"></i><span>RTL / LTR</span>' +
+                  '<i class="bi bi-arrow-left-right"></i><span>RTL / LTR</span>' +
                 '</button>' +
               '</div>' +
             '</div>' +
