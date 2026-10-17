@@ -66,7 +66,8 @@
      ------------------------------------------------------------ */
   var BRAND_LOGO_HTML =
     '<span class="brand-logo-wrap">' +
-      '<img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img" width="46" height="46">' +
+      '<img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img logo-light-only" width="46" height="46">' +
+      '<img src="assets/images/logo/logo-dark.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img logo-dark-only" width="46" height="46">' +
     '</span>';
 
   /* ------------------------------------------------------------

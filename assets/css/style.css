@@ -589,6 +589,12 @@ img {
   object-position: center 20%;
   display: block;
 }
+.logo-light-only {
+  display: block !important;
+}
+.logo-dark-only {
+  display: none !important;
+}
 
 /* Nav Links */
 .navbar-nav {
@@ -2817,19 +2823,70 @@ section[id] {
 .h2-gift-card:hover .h2-gift-thumb img {
   transform: scale(1.05);
 }
-.h2-gift-tile {
+.h2-gift-tile,
+.addon-feature-card {
   background: var(--surface-2);
   border: 1px solid var(--border-soft);
   border-radius: 1.15rem;
-  padding: 1.25rem;
+  padding: 1.25rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
   transition: all 0.25s ease;
 }
-.h2-gift-tile:hover {
+.addon-feature-card {
+  background: var(--surface);
+}
+.h2-gift-tile:hover,
+.addon-feature-card:hover {
   background: var(--surface);
   border-color: var(--brand);
   transform: translateY(-2px);
   box-shadow: var(--shadow-xs);
 }
+.h2-gift-tile .h2-gift-icon,
+.h2-gift-tile > .text-brand,
+.addon-feature-icon {
+  font-size: 1.75rem;
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h2-gift-tile .h2-gift-title,
+.h2-gift-tile h6,
+.addon-feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.h2-gift-tile .h2-gift-desc,
+.h2-gift-tile p,
+.addon-feature-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-bottom: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
 
 /* Section 7: Commission Journey Roadmap */
 .h2-journey-card {
@@ -3091,9 +3148,59 @@ section[id] {
 .about-hero .rounded-4 img,
 .contact-hero .rounded-4 img {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 800 / 599 !important;
+  height: auto !important;
+  max-height: 440px !important;
   object-fit: cover;
   display: block;
+}
+
+/* About Page Craft Process Section Image Matching Left Content Length Exactly */
+#aboutProcess .about-craft-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  #aboutProcess .about-craft-frame {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  #aboutProcess .about-craft-frame {
+    min-height: 400px;
+    height: 440px;
+    width: 100%;
+  }
+}
+
+/* About Page Hero Main Heading - Guaranteed Single Line on Desktop as requested */
+@media (min-width: 992px) {
+  .about-hero .hero-title {
+    font-size: clamp(1.42rem, 2.05vw, 1.95rem) !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.015em;
+  }
+}
+@media (min-width: 1200px) {
+  .about-hero .hero-title {
+    font-size: clamp(1.68rem, 2.18vw, 2.12rem) !important;
+    white-space: nowrap !important;
+  }
+}
+@media (min-width: 1400px) {
+  .about-hero .hero-title {
+    font-size: 2.22rem !important;
+    white-space: nowrap !important;
+  }
 }
 
 /* Portfolio Gallery Intro Image Matching Right Content */

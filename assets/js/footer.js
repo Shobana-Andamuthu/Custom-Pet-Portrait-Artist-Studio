@@ -78,7 +78,8 @@
             '<div class="col-lg-4 col-md-6 pe-lg-4">' +
               '<a href="index.html" class="d-inline-flex align-items-center gap-2 mb-3 text-decoration-none navbar-brand" aria-label="Paw & Brush — Custom Pet Portrait Studio">' +
                 '<span class="brand-logo-wrap">' +
-                  '<img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img" width="48" height="48">' +
+                  '<img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img logo-light-only" width="48" height="48">' +
+                  '<img src="assets/images/logo/logo-dark.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img logo-dark-only" width="48" height="48">' +
                 '</span>' +
                 '<span class="brand-name">' +
                   '<span class="brand-name-top" style="font-size:1.35rem">PAW &<span class="brand-name-accent"> BRUSH</span></span>' +
