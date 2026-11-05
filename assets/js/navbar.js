@@ -171,18 +171,18 @@
               '<i class="bi bi-arrow-left-right"></i>' +
             '</button>' +
 
-            /* Commission Artwork CTA (Visible only on wide desktop >= 1400px) */
+            /* Commission Artwork CTA (Visible on wide desktop >= 1400px) */
             '<a href="contact.html" class="btn btn-brand btn-sm d-none d-xxl-inline-flex align-items-center gap-1 ms-1" aria-label="Commission Artwork">' +
               '<i class="bi bi-brush-fill"></i><span>Commission Artwork</span>' +
             '</a>' +
 
-            /* Mobile & Tablet Toggler (Active on screens < 1400px) */
-            '<button class="navbar-toggler border-0 d-xxl-none icon-btn ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">' +
-              '<i class="bi bi-list fs-4"></i>' +
+            /* Hamburger Toggler (Active on iPad, iPad Pro 13, and tablet/mobile screens < 1400px) */
+            '<button class="navbar-toggler d-xxl-none icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">' +
+              '<i class="bi bi-list"></i>' +
             '</button>' +
           '</div>' +
 
-          /* Centered Nav Links (Desktop >= 1400px) */
+          /* Centered Nav Links (Desktop >= 1400px: all navigation links visible horizontally) */
           '<div class="collapse navbar-collapse order-xxl-2 d-none d-xxl-flex justify-content-center">' +
             '<ul class="navbar-nav">' + desktopNavItems() + '</ul>' +
           '</div>' +

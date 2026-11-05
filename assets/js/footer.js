@@ -75,7 +75,7 @@
         '<div class="container">' +
           '<div class="row g-4">' +
             /* Atelier Identity */
-            '<div class="col-lg-4 col-md-6 pe-lg-4">' +
+            '<div class="col-12 col-md-6 col-xl-4 order-1 footer-col-brand pe-md-4 pe-xl-4">' +
               '<a href="index.html" class="d-inline-flex align-items-center gap-2 mb-3 text-decoration-none navbar-brand" aria-label="Paw & Brush — Custom Pet Portrait Studio">' +
                 '<span class="brand-logo-wrap">' +
                   '<img src="assets/images/logo/logo.png" alt="Paw & Brush Custom Pet Portrait Studio" class="brand-logo-img logo-light-only" width="48" height="48">' +
@@ -95,31 +95,31 @@
             '</div>' +
 
             /* Mediums & Portfolio */
-            '<div class="col-lg-2 col-md-6 col-6">' +
+            '<div class="col-6 col-md-6 col-xl-2 order-2 order-md-3 order-xl-2 footer-col-links">' +
               '<h5 class="footer-col-title">Artistic Mediums</h5>' +
               '<ul class="footer-links">' +
-                '<li><a href="portfolio.html?medium=oil"><i class="bi bi-chevron-right"></i>Oil on Linen</a></li>' +
-                '<li><a href="portfolio.html?medium=watercolor"><i class="bi bi-chevron-right"></i>Botanical Watercolor</a></li>' +
-                '<li><a href="portfolio.html?medium=charcoal"><i class="bi bi-chevron-right"></i>Classic Charcoal</a></li>' +
-                '<li><a href="portfolio.html?medium=acrylic"><i class="bi bi-chevron-right"></i>Modern Acrylic</a></li>' +
-                '<li><a href="portfolio.html?medium=pastels"><i class="bi bi-chevron-right"></i>Soft Pastel Velvet</a></li>' +
+                '<li><a href="portfolio.html?medium=oil"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Oil on Linen</span></a></li>' +
+                '<li><a href="portfolio.html?medium=watercolor"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Botanical Watercolor</span></a></li>' +
+                '<li><a href="portfolio.html?medium=charcoal"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Classic Charcoal</span></a></li>' +
+                '<li><a href="portfolio.html?medium=acrylic"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Modern Acrylic</span></a></li>' +
+                '<li><a href="portfolio.html?medium=pastels"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Soft Pastel Velvet</span></a></li>' +
               '</ul>' +
             '</div>' +
 
             /* Commission Services */
-            '<div class="col-lg-2 col-md-6 col-6">' +
+            '<div class="col-6 col-md-6 col-xl-2 order-3 order-md-4 order-xl-3 footer-col-links">' +
               '<h5 class="footer-col-title">Collector Care</h5>' +
               '<ul class="footer-links">' +
-                '<li><a href="commission-process.html"><i class="bi bi-chevron-right"></i>Commission Guide</a></li>' +
-                '<li><a href="commission-process.html#pricing"><i class="bi bi-chevron-right"></i>Pricing & Sizing</a></li>' +
-                '<li><a href="about.html#studio"><i class="bi bi-chevron-right"></i>Our Atelier Story</a></li>' +
-                '<li><a href="about.html#materials"><i class="bi bi-chevron-right"></i>Museum Materials</a></li>' +
-                '<li><a href="contact.html"><i class="bi bi-chevron-right"></i>Inquire Commission</a></li>' +
+                '<li><a href="commission-process.html"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Commission Guide</span></a></li>' +
+                '<li><a href="commission-process.html#pricing"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Pricing & Sizing</span></a></li>' +
+                '<li><a href="about.html#studio"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Our Atelier Story</span></a></li>' +
+                '<li><a href="about.html#materials"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Museum Materials</span></a></li>' +
+                '<li><a href="contact.html"><i class="bi bi-chevron-right" aria-hidden="true"></i><span>Inquire Commission</span></a></li>' +
               '</ul>' +
             '</div>' +
 
             /* Studio Contact & Newsletter */
-            '<div class="col-lg-4 col-md-6">' +
+            '<div class="col-12 col-md-6 col-xl-4 order-4 order-md-2 order-xl-4 footer-col-newsletter ps-md-2 ps-xl-3">' +
               '<h5 class="footer-col-title">Atelier Newsletter</h5>' +
               '<p class="small text-muted mb-2">Subscribe for studio release dates and quarterly commission availability.</p>' +
               '<form class="footer-newsletter mb-3" id="atelierNewsletterForm" novalidate>' +
@@ -141,11 +141,14 @@
 
       /* -------- Bottom Provenance Bar -------- */
       '<div class="footer-bottom">' +
-        '<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">' +
-          '<div class="text-muted small">&copy; <span class="year">2026</span> PawTrait Atelier. Handcrafted Custom Pet Portraits. All rights reserved.</div>' +
-          '<div class="d-flex gap-3 small text-muted">' +
-            '<span>Certificate of Authenticity Included</span> &bull; ' +
-            '<span>100% Archival Guarantee</span>' +
+        '<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">' +
+          '<div class="text-muted small text-center text-md-start">&copy; <span class="year">2026</span> Paw & Brush Custom Pet Portrait Studio. All rights reserved.</div>' +
+          '<div class="footer-bottom-links d-flex flex-wrap justify-content-center align-items-center gap-3 small text-muted">' +
+            '<a href="about.html#materials" class="footer-legal-link"><i class="bi bi-shield-check text-brand me-1"></i>Archival Guarantee</a>' +
+            '<span class="footer-sep" aria-hidden="true">&bull;</span>' +
+            '<a href="commission-process.html#pricing" class="footer-legal-link"><i class="bi bi-patch-check text-gold me-1"></i>Pricing & Sizing</a>' +
+            '<span class="footer-sep" aria-hidden="true">&bull;</span>' +
+            '<a href="contact.html" class="footer-legal-link"><i class="bi bi-geo-alt text-brand me-1"></i>Studio Location</a>' +
           '</div>' +
         '</div>' +
       '</div>' +

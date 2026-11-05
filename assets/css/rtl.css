@@ -47,9 +47,19 @@
   inset-inline-start: 22px;
 }
 
-/* Footer Links Hover Offset */
+/* Footer Links Hover Offset & Chevron Flip */
+[dir="rtl"] .footer-links a i {
+  transform: scaleX(-1);
+}
 [dir="rtl"] .footer-links a:hover {
   transform: translateX(-3px);
+}
+[dir="rtl"] .footer-links a:hover i {
+  transform: scaleX(-1) translateX(-2px);
+}
+[dir="rtl"] .studio-map-pin-pill {
+  inset-inline-start: 1rem;
+  inset-inline-end: auto;
 }
 
 /* Breadcrumb Separator */

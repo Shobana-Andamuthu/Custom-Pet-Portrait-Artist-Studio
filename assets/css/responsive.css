@@ -57,7 +57,8 @@
   .site-header .navbar-collapse {
     display: none !important;
   }
-  .site-header .navbar-toggler {
+  .site-header .navbar-toggler,
+  .header-actions .navbar-toggler {
     display: inline-flex !important;
   }
   .section-title {
@@ -66,8 +67,9 @@
 }
 
 /* ==========================================================================
-   IPAD, IPAD PRO & SMALL LAPTOPS (768px – 1399.98px)
-   - Menu icon (hamburger offcanvas) is activated below 1400px
+   IPAD, IPAD PRO 13 & TABLETS (768px – 1399.98px)
+   - Menu icon (hamburger offcanvas) is activated on iPad & iPad Pro 13 (< 1400px)
+   - Wide desktop (>= 1400px) displays full horizontal navigation links
    - Maximum 2 cards per row for all card grids
    ========================================================================== */
 @media (min-width: 768px) and (max-width: 1399.98px) {
@@ -876,6 +878,27 @@
   }
   .h2-medium-thumb {
     height: 160px;
+  }
+}
+
+/* Studio Map Section Responsive Adaptations */
+@media (max-width: 991.98px) {
+  .studio-map-frame-wrap,
+  .studio-map-iframe {
+    min-height: 380px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .studio-map-frame-wrap,
+  .studio-map-iframe {
+    min-height: 300px;
+    height: 300px;
+  }
+  .studio-map-pin-pill {
+    padding: 0.75rem 1rem !important;
+    gap: 0.65rem !important;
   }
 }
 

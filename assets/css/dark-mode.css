@@ -184,15 +184,17 @@
 }
 
 /* Icon Buttons in Dark */
-[data-bs-theme="dark"] .icon-btn {
-  background: #211B18;
-  border-color: #2E2723;
-  color: #FBF8F4;
+[data-bs-theme="dark"] .icon-btn,
+[data-bs-theme="dark"] .header-actions .navbar-toggler {
+  background: #211B18 !important;
+  border-color: #2E2723 !important;
+  color: #FBF8F4 !important;
 }
-[data-bs-theme="dark"] .icon-btn:hover {
-  background: rgba(222, 123, 92, 0.2);
-  color: #DE7B5C;
-  border-color: #DE7B5C;
+[data-bs-theme="dark"] .icon-btn:hover,
+[data-bs-theme="dark"] .header-actions .navbar-toggler:hover {
+  background: rgba(222, 123, 92, 0.2) !important;
+  color: #DE7B5C !important;
+  border-color: #DE7B5C !important;
 }
 
 /* Cards & Components in Dark */
@@ -589,6 +591,37 @@
 [data-bs-theme="dark"] .clean-process-time-pill i {
   color: #E5B564 !important;
 }
+
+/* Home 2 Hero Secondary Button in Dark Mode */
+[data-bs-theme="dark"] .btn-h2-secondary {
+  background: #FFFFFF !important;
+  color: #141110 !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55) !important;
+}
+[data-bs-theme="dark"] .btn-h2-secondary i {
+  color: #C86241 !important;
+}
+[data-bs-theme="dark"] .btn-h2-secondary:hover {
+  background: #F3EBE6 !important;
+  color: #C86241 !important;
+  border-color: #F3EBE6 !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Studio Map Section in Dark Mode */
+[data-bs-theme="dark"] .studio-map-iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(88%) saturate(1.1);
+}
+[data-bs-theme="dark"] .studio-map-pin-pill {
+  background: rgba(33, 27, 24, 0.94) !important;
+  border-color: #3D342F !important;
+}
+[data-bs-theme="dark"] .studio-map-badge-icon {
+  background: rgba(222, 123, 92, 0.18) !important;
+  color: #ECA18A !important;
+}
+
 
 
 

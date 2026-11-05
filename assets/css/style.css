@@ -113,6 +113,12 @@ html {
   background-color: var(--cream);
 }
 
+html {
+  overflow-x: hidden !important;
+  max-width: 100%;
+  width: 100%;
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;
@@ -121,8 +127,10 @@ body {
   background-color: var(--cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
+  overflow-x: hidden !important;
   max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -426,6 +434,38 @@ img {
   box-shadow: 0 12px 30px rgba(212, 160, 67, 0.38);
 }
 
+/* Homepage 2 Hero Secondary CTA Button - Distinct High-Contrast Visibility */
+.btn-h2-secondary {
+  background: #FFFFFF !important;
+  color: #1A1412 !important;
+  border: 2px solid #FFFFFF !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.32) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.btn-h2-secondary i {
+  color: var(--brand, #B85333) !important;
+  transition: transform 0.25s ease;
+}
+.btn-h2-secondary:hover {
+  background: #FAF7F2 !important;
+  color: var(--brand, #B85333) !important;
+  border-color: #FAF7F2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.42) !important;
+}
+.btn-h2-secondary:hover i {
+  transform: rotate(-8deg) scale(1.1);
+}
+.btn-h2-secondary:focus-visible {
+  outline: 3px solid #E5B564 !important;
+  outline-offset: 3px;
+}
+
 .btn-sm {
   padding: 0.45rem 1.15rem;
   font-size: 0.85rem;
@@ -610,6 +650,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  white-space: nowrap !important;
 }
 .navbar-nav .nav-link:hover {
   color: var(--brand) !important;
@@ -729,6 +770,42 @@ img {
   vertical-align: middle !important;
   box-sizing: border-box !important;
   border-radius: 50% !important;
+  border: 1px solid var(--border-soft) !important;
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease !important;
+}
+
+.header-actions .icon-btn:hover,
+.header-actions .theme-toggle:hover,
+.header-actions .rtl-toggle:hover,
+.header-actions .navbar-toggler:hover {
+  background: var(--brand-surface) !important;
+  color: var(--brand) !important;
+  border-color: rgba(var(--brand-rgb), 0.3) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xs);
+}
+
+.header-actions .navbar-toggler:focus,
+.header-actions .navbar-toggler:focus-visible {
+  outline: 2px solid var(--brand) !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+.header-actions .navbar-toggler i {
+  font-size: 1.35rem !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: inherit !important;
 }
 
 .header-actions .btn-brand {
@@ -753,13 +830,14 @@ img {
   .header-actions .btn-brand {
     display: none !important;
   }
-  .header-actions .navbar-toggler {
+  .header-actions .navbar-toggler,
+  .site-header .navbar-toggler {
     display: inline-flex !important;
   }
 }
 
-/* 2. TABLET, IPAD PRO & INTERMEDIATE SCREENS (768px – 1399.98px):
-   Activate Hamburger Menu Icon to prevent overlap and text-wrapping */
+/* 2. TABLET, IPAD & IPAD PRO 13 (768px – 1399.98px):
+   Activate Hamburger Menu Icon for all iPads (iPad, iPad Mini, iPad Air, iPad Pro 11, iPad Pro 13 in portrait & landscape) */
 @media (min-width: 768px) and (max-width: 1399.98px) {
   .header-actions .theme-toggle,
   .header-actions .rtl-toggle {
@@ -777,7 +855,8 @@ img {
   }
 }
 
-/* 3. WIDE DESKTOP (>= 1400px): Full horizontal navigation */
+/* 3. WIDE DESKTOP (>= 1400px):
+   Full horizontal navigation, remove hamburger menu icon */
 @media (min-width: 1400px) {
   .site-header .navbar-toggler,
   .header-actions .navbar-toggler {
@@ -947,7 +1026,7 @@ section[id] {
   align-items: center;
   padding: 3rem 0;
   background: linear-gradient(180deg, var(--hero-grad-a) 0%, var(--hero-grad-b) 100%);
-  overflow: visible;
+  overflow: hidden !important;
   box-sizing: border-box;
 }
 .h1-hero > .container {
@@ -2303,28 +2382,73 @@ section[id] {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.25rem;
   color: var(--ink);
+  line-height: 1.35;
 }
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 .footer-links li {
-  margin-bottom: 0.65rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 .footer-links a {
   color: var(--muted);
-  font-size: 0.92rem;
-  transition: all 0.2s ease;
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.45;
+  transition: all 0.22s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+.footer-links a i {
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  font-size: 0.72rem;
+  color: var(--brand);
+  opacity: 0.85;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 3px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 .footer-links a:hover {
   color: var(--brand);
   transform: translateX(3px);
+}
+.footer-links a:hover i {
+  opacity: 1;
+  transform: translateX(2px);
+}
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.contact-info-list > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.45;
+  margin: 0 !important;
+}
+.contact-info-list > div i {
+  width: 16px;
+  min-width: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 .footer-social {
   display: flex;
@@ -2348,11 +2472,57 @@ section[id] {
   border-color: var(--brand);
   transform: translateY(-2px);
 }
+
+/* iPad and Tablet Footer Alignment (768px – 1199.98px) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .footer-main {
+    padding: 3.75rem 0 2.75rem;
+  }
+  .footer-main .row {
+    row-gap: 2.75rem !important;
+  }
+  .footer-col-title {
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+    white-space: nowrap;
+  }
+  .footer-links {
+    gap: 0.85rem;
+  }
+  .footer-links a {
+    white-space: nowrap;
+    font-size: 0.94rem;
+  }
+}
+
 .footer-bottom {
   border-top: 1px solid var(--border-soft);
   padding: 1.5rem 0;
   font-size: 0.88rem;
   color: var(--muted);
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .footer-bottom .container {
+    padding-inline-end: 75px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer-bottom {
+    padding-bottom: 5.5rem !important;
+  }
+}
+.footer-bottom-links {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-legal-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-legal-link:hover {
+  color: var(--brand) !important;
 }
 
 /* Floating Back to Top Button */
@@ -3937,6 +4107,59 @@ section[id] {
 .receipt-summary-table .row-item:last-child {
   border-bottom: none;
 }
+
+/* ==========================================================================
+   25. CONTACT PAGE — STUDIO LOCATION & INTERACTIVE MAP SECTION
+   ========================================================================== */
+.studio-map-info-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.studio-map-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--brand-surface);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(var(--brand-rgb), 0.15);
+}
+.studio-map-info-item {
+  line-height: 1.5;
+}
+.studio-map-frame-wrap {
+  min-height: 440px;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+.studio-map-iframe {
+  border: 0;
+  min-height: 440px;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  display: block;
+}
+.studio-map-pin-pill {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 5;
+  max-width: calc(100% - 2rem);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-soft);
+}
+.studio-map-pin-icon {
+  animation: mapPinBounce 2s infinite ease-in-out;
+}
+@keyframes mapPinBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
 
 
 
